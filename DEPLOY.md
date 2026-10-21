@@ -44,7 +44,7 @@ This repository ([`devdesai25/problem17-collocation-mining`](https://github.com/
      - System packages: `python-3.12`, `nodejs-20`, `ffmpeg`.
      - Build command:
        ```bash
-       pip install -r requirements.txt && python scripts/download_whisper.py && cd frontend && npm ci && npm run build
+       pip install --index-url https://pypi.org/simple -r requirements.txt && python scripts/download_whisper.py && cd frontend && npm ci && npm run build
        ```
      - Run command:
        ```bash

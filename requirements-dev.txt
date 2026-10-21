@@ -1,6 +1,8 @@
-# Development, Streamlit GUI, Offline Pipeline & Presentation/Report Generation
+# Base production server requirements
 -r requirements.txt
+nltk==3.9.1
 
+# Development, Streamlit GUI, Offline Pipeline & Presentation/Report Generation
 pandas==2.2.3
 scipy==1.15.2
 matplotlib==3.10.1
