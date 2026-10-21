@@ -1,0 +1,1396 @@
+{
+  "pmi": {
+    "coffee shop": {
+      "label": "genuine",
+      "commentary": "Fixed commercial compound. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "boot camp": {
+      "label": "genuine",
+      "commentary": "Fixed program name. The two words do not productively swap. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "ocean boulevard": {
+      "label": "genuine",
+      "commentary": "Fixed street name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "recreation assistant": {
+      "label": "genuine",
+      "commentary": "Fixed job title. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "vince lombardi": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "lombardi trophy": {
+      "label": "genuine",
+      "commentary": "Fixed trophy name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "task force": {
+      "label": "genuine",
+      "commentary": "Fixed institutional compound. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "tony frank": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "aaron scott": {
+      "label": "genuine",
+      "commentary": "Fixed personal name (given name plus surname) from the meeting floor. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "brook tucker": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "capitol hill": {
+      "label": "genuine",
+      "commentary": "Fixed neighborhood name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "mm hmm": {
+      "label": "junk",
+      "commentary": "A backchannel. The two syllables almost never occur apart, so dependence scores treat a noise token as a term. PMI still scores it at {score} with count {freq} because the two pieces are nearly exclusive. The measure only compares the joint probability with the product of the marginals. It does not know that a backchannel or a grammatical pair is not a tag."
+    },
+    "pro tem": {
+      "label": "genuine",
+      "commentary": "The short form of president pro tempore. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "san francisco": {
+      "label": "genuine",
+      "commentary": "City name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "attorney fee": {
+      "label": "genuine",
+      "commentary": "Fixed legal-finance compound, lemmatized from 'attorney fees'. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "orange crush": {
+      "label": "genuine",
+      "commentary": "Fixed local name (the Orange Crush interchange), not a compositional color-plus-verb. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "core mission": {
+      "label": "acceptable",
+      "commentary": "Fixed institutional noun ('core mission') left off the gold list. PMI ranks it with count {freq} for the same reason it ranks gold terms: the marginals are small. Low-frequency bias is why this fixed expression outruns 'city council'. Leaving it off the gold list makes the precision@20 hit count a lower bound."
+    },
+    "dry ice": {
+      "label": "genuine",
+      "commentary": "Fixed substance name that happens to be the topic of one hearing. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "santa clara": {
+      "label": "genuine",
+      "commentary": "Place name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "santa cruz": {
+      "label": "acceptable",
+      "commentary": "Place name. The gold list kept the longer 'santa cruz park' and not this bigram. PMI ranks it with count {freq} for the same reason it ranks gold terms: the marginals are small. Low-frequency bias is why this fixed expression outruns 'city council'. Leaving it off the gold list makes the precision@20 hit count a lower bound."
+    }
+  },
+  "pmi2": {
+    "coffee shop": {
+      "label": "genuine",
+      "commentary": "Fixed commercial compound. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "boot camp": {
+      "label": "genuine",
+      "commentary": "Fixed program name. The two words do not productively swap. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "ocean boulevard": {
+      "label": "genuine",
+      "commentary": "Fixed street name. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "recreation assistant": {
+      "label": "genuine",
+      "commentary": "Fixed job title. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "vince lombardi": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "lombardi trophy": {
+      "label": "genuine",
+      "commentary": "Fixed trophy name. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "task force": {
+      "label": "genuine",
+      "commentary": "Fixed institutional compound. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "tony frank": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "aaron scott": {
+      "label": "genuine",
+      "commentary": "Fixed personal name (given name plus surname) from the meeting floor. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "brook tucker": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "capitol hill": {
+      "label": "genuine",
+      "commentary": "Fixed neighborhood name. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "mm hmm": {
+      "label": "junk",
+      "commentary": "A backchannel. The two syllables almost never occur apart, so dependence scores treat a noise token as a term. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "pro tem": {
+      "label": "genuine",
+      "commentary": "The short form of president pro tempore. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "san francisco": {
+      "label": "genuine",
+      "commentary": "City name. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "attorney fee": {
+      "label": "genuine",
+      "commentary": "Fixed legal-finance compound, lemmatized from 'attorney fees'. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "orange crush": {
+      "label": "genuine",
+      "commentary": "Fixed local name (the Orange Crush interchange), not a compositional color-plus-verb. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "core mission": {
+      "label": "acceptable",
+      "commentary": "Fixed institutional noun ('core mission') left off the gold list. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "dry ice": {
+      "label": "genuine",
+      "commentary": "Fixed substance name that happens to be the topic of one hearing. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "santa clara": {
+      "label": "genuine",
+      "commentary": "Place name. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    },
+    "santa cruz": {
+      "label": "acceptable",
+      "commentary": "Place name. The gold list kept the longer 'santa cruz park' and not this bigram. The underlying PMI is positive, so squaring (score {score}, count {freq}) keeps this row in the same place as plain PMI. PMI squared would also promote a large negative PMI such as 'the to', but those squared values stay far below this head. The top 20 therefore copies PMI's low-frequency bias rather than correcting it."
+    }
+  },
+  "pmi3": {
+    "coffee shop": {
+      "label": "genuine",
+      "commentary": "Fixed commercial compound. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "boot camp": {
+      "label": "genuine",
+      "commentary": "Fixed program name. The two words do not productively swap. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "ocean boulevard": {
+      "label": "genuine",
+      "commentary": "Fixed street name. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "recreation assistant": {
+      "label": "genuine",
+      "commentary": "Fixed job title. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "vince lombardi": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "lombardi trophy": {
+      "label": "genuine",
+      "commentary": "Fixed trophy name. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "task force": {
+      "label": "genuine",
+      "commentary": "Fixed institutional compound. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "tony frank": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "aaron scott": {
+      "label": "genuine",
+      "commentary": "Fixed personal name (given name plus surname) from the meeting floor. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "brook tucker": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "capitol hill": {
+      "label": "genuine",
+      "commentary": "Fixed neighborhood name. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "mm hmm": {
+      "label": "junk",
+      "commentary": "A backchannel. The two syllables almost never occur apart, so dependence scores treat a noise token as a term. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "pro tem": {
+      "label": "genuine",
+      "commentary": "The short form of president pro tempore. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "san francisco": {
+      "label": "genuine",
+      "commentary": "City name. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "attorney fee": {
+      "label": "genuine",
+      "commentary": "Fixed legal-finance compound, lemmatized from 'attorney fees'. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "orange crush": {
+      "label": "genuine",
+      "commentary": "Fixed local name (the Orange Crush interchange), not a compositional color-plus-verb. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "core mission": {
+      "label": "acceptable",
+      "commentary": "Fixed institutional noun ('core mission') left off the gold list. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "dry ice": {
+      "label": "genuine",
+      "commentary": "Fixed substance name that happens to be the topic of one hearing. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "santa clara": {
+      "label": "genuine",
+      "commentary": "Place name. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    },
+    "santa cruz": {
+      "label": "acceptable",
+      "commentary": "Place name. The gold list kept the longer 'santa cruz park' and not this bigram. Cubing a positive PMI (score {score}, count {freq}) is strictly monotone, so this row matches plain PMI exactly. PMI cubed stretches the gaps among rare exclusive pairs and does not bring high-frequency titles up."
+    }
+  },
+  "npmi": {
+    "boot camp": {
+      "label": "genuine",
+      "commentary": "Fixed program name. The two words do not productively swap. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "coffee shop": {
+      "label": "genuine",
+      "commentary": "Fixed commercial compound. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "dry ice": {
+      "label": "genuine",
+      "commentary": "Fixed substance name that happens to be the topic of one hearing. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "mm hmm": {
+      "label": "junk",
+      "commentary": "A backchannel. The two syllables almost never occur apart, so dependence scores treat a noise token as a term. NPMI is essentially 1 when the joint count {freq} accounts for both marginals, which is why a backchannel ties the real names. Dividing by -log P(w1, w2) removes raw PMI's extra reward for rarity, and it does not remove exclusivity."
+    },
+    "san francisco": {
+      "label": "genuine",
+      "commentary": "City name. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "lombardi trophy": {
+      "label": "genuine",
+      "commentary": "Fixed trophy name. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "domestic violence": {
+      "label": "genuine",
+      "commentary": "Fixed policy term. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "ocean boulevard": {
+      "label": "genuine",
+      "commentary": "Fixed street name. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "recreation assistant": {
+      "label": "genuine",
+      "commentary": "Fixed job title. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "vince lombardi": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "super bowl": {
+      "label": "genuine",
+      "commentary": "Fixed event name. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "maiden speech": {
+      "label": "genuine",
+      "commentary": "Fixed parliamentary formula for a member's first speech. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "cabo verde": {
+      "label": "genuine",
+      "commentary": "Country name used as a hearing topic, not a compositional pairing. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "aaron scott": {
+      "label": "genuine",
+      "commentary": "Fixed personal name (given name plus surname) from the meeting floor. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "brook tucker": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "capitol hill": {
+      "label": "genuine",
+      "commentary": "Fixed neighborhood name. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "pro tem": {
+      "label": "genuine",
+      "commentary": "The short form of president pro tempore. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "task force": {
+      "label": "genuine",
+      "commentary": "Fixed institutional compound. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "long beach": {
+      "label": "genuine",
+      "commentary": "City name, non-compositional. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    },
+    "real estate": {
+      "label": "genuine",
+      "commentary": "Fixed industry term. NPMI score {score} at count {freq} is high because the pair covers its own marginals, not because the count is large. Normalization lets a few higher-count exclusive names ('long beach', 'domestic violence') climb past some frequency-3 pairs that raw PMI had ranked above them."
+    }
+  },
+  "chi_sq": {
+    "boot camp": {
+      "label": "genuine",
+      "commentary": "Fixed program name. The two words do not productively swap. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "coffee shop": {
+      "label": "genuine",
+      "commentary": "Fixed commercial compound. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "dry ice": {
+      "label": "genuine",
+      "commentary": "Fixed substance name that happens to be the topic of one hearing. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "mm hmm": {
+      "label": "junk",
+      "commentary": "A backchannel. The two syllables almost never occur apart, so dependence scores treat a noise token as a term. Pearson's chi-square is non-directional. Score {score} at count {freq} says the cell is dependent, and a backchannel that never occurs apart is as dependent as a policy term. The statistic does not penalize that the way PMI's information ratio is sometimes claimed to."
+    },
+    "san francisco": {
+      "label": "genuine",
+      "commentary": "City name. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "lombardi trophy": {
+      "label": "genuine",
+      "commentary": "Fixed trophy name. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "domestic violence": {
+      "label": "genuine",
+      "commentary": "Fixed policy term. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "super bowl": {
+      "label": "genuine",
+      "commentary": "Fixed event name. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "ocean boulevard": {
+      "label": "genuine",
+      "commentary": "Fixed street name. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "recreation assistant": {
+      "label": "genuine",
+      "commentary": "Fixed job title. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "vince lombardi": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "maiden speech": {
+      "label": "genuine",
+      "commentary": "Fixed parliamentary formula for a member's first speech. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "cabo verde": {
+      "label": "genuine",
+      "commentary": "Country name used as a hearing topic, not a compositional pairing. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "long beach": {
+      "label": "genuine",
+      "commentary": "City name, non-compositional. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "aaron scott": {
+      "label": "genuine",
+      "commentary": "Fixed personal name (given name plus surname) from the meeting floor. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "brook tucker": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "capitol hill": {
+      "label": "genuine",
+      "commentary": "Fixed neighborhood name. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "pro tem": {
+      "label": "genuine",
+      "commentary": "The short form of president pro tempore. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "solid waste": {
+      "label": "genuine",
+      "commentary": "Fixed utility term. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "real estate": {
+      "label": "genuine",
+      "commentary": "Fixed industry term. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    }
+  },
+  "chi_sq_yates": {
+    "dry ice": {
+      "label": "genuine",
+      "commentary": "Fixed substance name that happens to be the topic of one hearing. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "boot camp": {
+      "label": "genuine",
+      "commentary": "Fixed program name. The two words do not productively swap. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "domestic violence": {
+      "label": "genuine",
+      "commentary": "Fixed policy term. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "super bowl": {
+      "label": "genuine",
+      "commentary": "Fixed event name. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "mm hmm": {
+      "label": "junk",
+      "commentary": "A backchannel. The two syllables almost never occur apart, so dependence scores treat a noise token as a term. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "san francisco": {
+      "label": "genuine",
+      "commentary": "City name. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "coffee shop": {
+      "label": "genuine",
+      "commentary": "Fixed commercial compound. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "lombardi trophy": {
+      "label": "genuine",
+      "commentary": "Fixed trophy name. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "cabo verde": {
+      "label": "genuine",
+      "commentary": "Country name used as a hearing topic, not a compositional pairing. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "long beach": {
+      "label": "genuine",
+      "commentary": "City name, non-compositional. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "maiden speech": {
+      "label": "genuine",
+      "commentary": "Fixed parliamentary formula for a member's first speech. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "ocean boulevard": {
+      "label": "genuine",
+      "commentary": "Fixed street name. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "recreation assistant": {
+      "label": "genuine",
+      "commentary": "Fixed job title. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "vince lombardi": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "solid waste": {
+      "label": "genuine",
+      "commentary": "Fixed utility term. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "real estate": {
+      "label": "genuine",
+      "commentary": "Fixed industry term. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "cape verdean": {
+      "label": "acceptable",
+      "commentary": "Demonym for the Cabo Verde community. Real, and not on the gold list, which kept the place name instead. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term. This is the Yates-only phrase in the eight from-scratch top-20 lists."
+    },
+    "aaron scott": {
+      "label": "genuine",
+      "commentary": "Fixed personal name (given name plus surname) from the meeting floor. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "brook tucker": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    },
+    "capitol hill": {
+      "label": "genuine",
+      "commentary": "Fixed neighborhood name. Yates subtracts N/2 inside the absolute deviation before squaring, so score {score} at count {freq} is pulled down relative to the uncorrected chi-square, more so for smaller counts. The correction breaks the saturated tie at N and prefers exclusive pairs that have a bit more mass. It is still non-directional, so a backchannel remains competitive with a policy term."
+    }
+  },
+  "student_t": {
+    "thank you": {
+      "label": "acceptable",
+      "commentary": "The dominant politeness formula in council speech. Fixed, and not a domain tag. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "of the": {
+      "label": "junk",
+      "commentary": "The highest-frequency grammatical bigram. Dependence here is English, not a domain. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "want to": {
+      "label": "junk",
+      "commentary": "Verb plus infinitive marker. It combines with anything. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "and i": {
+      "label": "junk",
+      "commentary": "Coordinator plus first-person pronoun. It is syntax, not a term. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "i be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'I am'. A copula artifact, not a collocation. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "you know": {
+      "label": "acceptable",
+      "commentary": "A fixed discourse marker. Not a domain tag. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "in the": {
+      "label": "junk",
+      "commentary": "Preposition plus determiner, the prototype of grammatical co-occurrence. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "i think": {
+      "label": "junk",
+      "commentary": "A stance marker. Speakers use it with any complement. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "we be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'we are'. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "we have": {
+      "label": "junk",
+      "commentary": "Pronoun plus verb, no lexical term. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "that we": {
+      "label": "junk",
+      "commentary": "Complementizer plus pronoun. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "go to": {
+      "label": "junk",
+      "commentary": "A high-frequency verb plus particle. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "do not": {
+      "label": "junk",
+      "commentary": "Clitic repair of 'don't' plus the auxiliary. Grammatical, not topical. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "the city": {
+      "label": "acceptable",
+      "commentary": "A compositional frame that is constant in this genre. Not gold, because 'city council' and 'city of' carry the name. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "so i": {
+      "label": "junk",
+      "commentary": "Discourse glue. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "this be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'this is'. The tagger created a collocation that was never spoken. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators. Among the from-scratch metrics, only the t-test promotes 'this be' into the top 20."
+    },
+    "there be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'there is' / 'there are'. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "it be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'it is'. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "i would": {
+      "label": "junk",
+      "commentary": "Pronoun plus modal. No lexical cohesion. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "on the": {
+      "label": "junk",
+      "commentary": "Preposition plus determiner. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    }
+  },
+  "likelihood_ratio": {
+    "thank you": {
+      "label": "acceptable",
+      "commentary": "The dominant politeness formula in council speech. Fixed, and not a domain tag. G^2 score {score} at count {freq} rewards a repeated fixed formula. Dunning's statistic behaves better than chi-square at low counts, and on this list the mass is not low: high-frequency discourse still fills most of the top 20."
+    },
+    "want to": {
+      "label": "junk",
+      "commentary": "Verb plus infinitive marker. It combines with anything. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "you know": {
+      "label": "acceptable",
+      "commentary": "A fixed discourse marker. Not a domain tag. G^2 score {score} at count {freq} rewards a repeated fixed formula. Dunning's statistic behaves better than chi-square at low counts, and on this list the mass is not low: high-frequency discourse still fills most of the top 20."
+    },
+    "i think": {
+      "label": "junk",
+      "commentary": "A stance marker. Speakers use it with any complement. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "do not": {
+      "label": "junk",
+      "commentary": "Clitic repair of 'don't' plus the auxiliary. Grammatical, not topical. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "of the": {
+      "label": "junk",
+      "commentary": "The highest-frequency grammatical bigram. Dependence here is English, not a domain. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "go to": {
+      "label": "junk",
+      "commentary": "A high-frequency verb plus particle. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "council member": {
+      "label": "genuine",
+      "commentary": "The standard role title in this corpus. G^2 score {score} at count {freq} is one of the few domain hits in this top 20. The likelihood ratio still grows with sample size and is non-directional, but it is less hypnotized by frequency-3 exclusivity than PMI or Pearson's chi-square, so a repeated title can surface. No other from-scratch metric places 'council member' in its top 20."
+    },
+    "as well": {
+      "label": "acceptable",
+      "commentary": "A fixed additive discourse formula, deliberately not a domain tag. G^2 score {score} at count {freq} rewards a repeated fixed formula. Dunning's statistic behaves better than chi-square at low counts, and on this list the mass is not low: high-frequency discourse still fills most of the top 20."
+    },
+    "we have": {
+      "label": "junk",
+      "commentary": "Pronoun plus verb, no lexical term. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "and i": {
+      "label": "junk",
+      "commentary": "Coordinator plus first-person pronoun. It is syntax, not a term. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "make sure": {
+      "label": "acceptable",
+      "commentary": "A fixed discourse verb. Not a topic tag. G^2 score {score} at count {freq} rewards a repeated fixed formula. Dunning's statistic behaves better than chi-square at low counts, and on this list the mass is not low: high-frequency discourse still fills most of the top 20."
+    },
+    "long beach": {
+      "label": "genuine",
+      "commentary": "City name, non-compositional. G^2 score {score} at count {freq} is one of the few domain hits in this top 20. The likelihood ratio still grows with sample size and is non-directional, but it is less hypnotized by frequency-3 exclusivity than PMI or Pearson's chi-square, so a repeated title can surface."
+    },
+    "mr president": {
+      "label": "genuine",
+      "commentary": "Fixed form of address to the chair. G^2 score {score} at count {freq} is one of the few domain hits in this top 20. The likelihood ratio still grows with sample size and is non-directional, but it is less hypnotized by frequency-3 exclusivity than PMI or Pearson's chi-square, so a repeated title can surface."
+    },
+    "that we": {
+      "label": "junk",
+      "commentary": "Complementizer plus pronoun. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "look at": {
+      "label": "junk",
+      "commentary": "Verb plus particle, freely composed. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "the city": {
+      "label": "acceptable",
+      "commentary": "A compositional frame that is constant in this genre. Not gold, because 'city council' and 'city of' carry the name. G^2 score {score} at count {freq} rewards a repeated fixed formula. Dunning's statistic behaves better than chi-square at low counts, and on this list the mass is not low: high-frequency discourse still fills most of the top 20."
+    },
+    "i be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'I am'. A copula artifact, not a collocation. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "so i": {
+      "label": "junk",
+      "commentary": "Discourse glue. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "kind of": {
+      "label": "acceptable",
+      "commentary": "A fixed hedge. Not a domain tag, and not random. G^2 score {score} at count {freq} rewards a repeated fixed formula. Dunning's statistic behaves better than chi-square at low counts, and on this list the mass is not low: high-frequency discourse still fills most of the top 20."
+    }
+  },
+  "nltk_pmi": {
+    "coffee shop": {
+      "label": "genuine",
+      "commentary": "Fixed commercial compound. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "boot camp": {
+      "label": "genuine",
+      "commentary": "Fixed program name. The two words do not productively swap. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "ocean boulevard": {
+      "label": "genuine",
+      "commentary": "Fixed street name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "recreation assistant": {
+      "label": "genuine",
+      "commentary": "Fixed job title. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "vince lombardi": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "lombardi trophy": {
+      "label": "genuine",
+      "commentary": "Fixed trophy name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "task force": {
+      "label": "genuine",
+      "commentary": "Fixed institutional compound. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "tony frank": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "aaron scott": {
+      "label": "genuine",
+      "commentary": "Fixed personal name (given name plus surname) from the meeting floor. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "capitol hill": {
+      "label": "genuine",
+      "commentary": "Fixed neighborhood name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "pro tem": {
+      "label": "genuine",
+      "commentary": "The short form of president pro tempore. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "mm hmm": {
+      "label": "junk",
+      "commentary": "A backchannel. The two syllables almost never occur apart, so dependence scores treat a noise token as a term. PMI still scores it at {score} with count {freq} because the two pieces are nearly exclusive. The measure only compares the joint probability with the product of the marginals. It does not know that a backchannel or a grammatical pair is not a tag."
+    },
+    "attorney fee": {
+      "label": "genuine",
+      "commentary": "Fixed legal-finance compound, lemmatized from 'attorney fees'. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "san francisco": {
+      "label": "genuine",
+      "commentary": "City name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "dry ice": {
+      "label": "genuine",
+      "commentary": "Fixed substance name that happens to be the topic of one hearing. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "santa clara": {
+      "label": "genuine",
+      "commentary": "Place name. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "core mission": {
+      "label": "acceptable",
+      "commentary": "Fixed institutional noun ('core mission') left off the gold list. PMI ranks it with count {freq} for the same reason it ranks gold terms: the marginals are small. Low-frequency bias is why this fixed expression outruns 'city council'. Leaving it off the gold list makes the precision@20 hit count a lower bound."
+    },
+    "orange crush": {
+      "label": "genuine",
+      "commentary": "Fixed local name (the Orange Crush interchange), not a compositional color-plus-verb. Count {freq} is at or near the frequency floor, and the score {score} is high because each word barely occurs outside the pair. That is PMI's low-frequency bias. A frequent title such as 'council member' is more useful to a tagger and ranks lower."
+    },
+    "santa cruz": {
+      "label": "acceptable",
+      "commentary": "Place name. The gold list kept the longer 'santa cruz park' and not this bigram. PMI ranks it with count {freq} for the same reason it ranks gold terms: the marginals are small. Low-frequency bias is why this fixed expression outruns 'city council'. Leaving it off the gold list makes the precision@20 hit count a lower bound."
+    },
+    "tara rise": {
+      "label": "acceptable",
+      "commentary": "A street or subdivision name that NLTK's marginals ranked into the PMI top 20. Not gold-listed. PMI ranks it with count {freq} for the same reason it ranks gold terms: the marginals are small. Low-frequency bias is why this fixed expression outruns 'city council'. Leaving it off the gold list makes the precision@20 hit count a lower bound. Our PMI ranks 'brook tucker' in this slot. NLTK's unigram marginals and finder.N, which counts tokens rather than bigrams, swap the two."
+    }
+  },
+  "nltk_chi_sq": {
+    "boot camp": {
+      "label": "genuine",
+      "commentary": "Fixed program name. The two words do not productively swap. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "coffee shop": {
+      "label": "genuine",
+      "commentary": "Fixed commercial compound. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "dry ice": {
+      "label": "genuine",
+      "commentary": "Fixed substance name that happens to be the topic of one hearing. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "mm hmm": {
+      "label": "junk",
+      "commentary": "A backchannel. The two syllables almost never occur apart, so dependence scores treat a noise token as a term. Pearson's chi-square is non-directional. Score {score} at count {freq} says the cell is dependent, and a backchannel that never occurs apart is as dependent as a policy term. The statistic does not penalize that the way PMI's information ratio is sometimes claimed to."
+    },
+    "lombardi trophy": {
+      "label": "genuine",
+      "commentary": "Fixed trophy name. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "domestic violence": {
+      "label": "genuine",
+      "commentary": "Fixed policy term. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "super bowl": {
+      "label": "genuine",
+      "commentary": "Fixed event name. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "ocean boulevard": {
+      "label": "genuine",
+      "commentary": "Fixed street name. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "recreation assistant": {
+      "label": "genuine",
+      "commentary": "Fixed job title. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "vince lombardi": {
+      "label": "genuine",
+      "commentary": "Fixed personal name. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "san francisco": {
+      "label": "genuine",
+      "commentary": "City name. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "maiden speech": {
+      "label": "genuine",
+      "commentary": "Fixed parliamentary formula for a member's first speech. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "cabo verde": {
+      "label": "genuine",
+      "commentary": "Country name used as a hearing topic, not a compositional pairing. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "aaron scott": {
+      "label": "genuine",
+      "commentary": "Fixed personal name (given name plus surname) from the meeting floor. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "capitol hill": {
+      "label": "genuine",
+      "commentary": "Fixed neighborhood name. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "pro tem": {
+      "label": "genuine",
+      "commentary": "The short form of president pro tempore. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "long beach": {
+      "label": "genuine",
+      "commentary": "City name, non-compositional. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "solid waste": {
+      "label": "genuine",
+      "commentary": "Fixed utility term. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "task force": {
+      "label": "genuine",
+      "commentary": "Fixed institutional compound. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    },
+    "real estate": {
+      "label": "genuine",
+      "commentary": "Fixed industry term. Chi-square score {score} at count {freq} is large because the off-diagonal cells are nearly empty, so the pair is far from independence. Exclusive pairs of any count saturate near N. Chi-square therefore piles rare names at the top and does not rank by how frequent a useful tag is."
+    }
+  },
+  "nltk_student_t": {
+    "thank you": {
+      "label": "acceptable",
+      "commentary": "The dominant politeness formula in council speech. Fixed, and not a domain tag. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "of the": {
+      "label": "junk",
+      "commentary": "The highest-frequency grammatical bigram. Dependence here is English, not a domain. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "want to": {
+      "label": "junk",
+      "commentary": "Verb plus infinitive marker. It combines with anything. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "i be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'I am'. A copula artifact, not a collocation. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "you know": {
+      "label": "acceptable",
+      "commentary": "A fixed discourse marker. Not a domain tag. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "and i": {
+      "label": "junk",
+      "commentary": "Coordinator plus first-person pronoun. It is syntax, not a term. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "in the": {
+      "label": "junk",
+      "commentary": "Preposition plus determiner, the prototype of grammatical co-occurrence. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "i think": {
+      "label": "junk",
+      "commentary": "A stance marker. Speakers use it with any complement. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "we be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'we are'. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "we have": {
+      "label": "junk",
+      "commentary": "Pronoun plus verb, no lexical term. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "go to": {
+      "label": "junk",
+      "commentary": "A high-frequency verb plus particle. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "do not": {
+      "label": "junk",
+      "commentary": "Clitic repair of 'don't' plus the auxiliary. Grammatical, not topical. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "that we": {
+      "label": "junk",
+      "commentary": "Complementizer plus pronoun. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "the city": {
+      "label": "acceptable",
+      "commentary": "A compositional frame that is constant in this genre. Not gold, because 'city council' and 'city of' carry the name. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "so i": {
+      "label": "junk",
+      "commentary": "Discourse glue. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "there be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'there is' / 'there are'. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "this be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'this is'. The tagger created a collocation that was never spoken. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "i would": {
+      "label": "junk",
+      "commentary": "Pronoun plus modal. No lexical cohesion. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "on the": {
+      "label": "junk",
+      "commentary": "Preposition plus determiner. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    },
+    "it be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'it is'. Student's t score {score} is large because the count is {freq}, not because the pair is a term. The Manning and Sch\u00fctze form divides a frequency-scale numerator by sqrt(f), so grammatical bigrams outrank domain names. The normal sampling model behind a t statistic is not satisfied by these sparse indicators."
+    }
+  },
+  "nltk_likelihood_ratio": {
+    "thank you": {
+      "label": "acceptable",
+      "commentary": "The dominant politeness formula in council speech. Fixed, and not a domain tag. G^2 score {score} at count {freq} rewards a repeated fixed formula. Dunning's statistic behaves better than chi-square at low counts, and on this list the mass is not low: high-frequency discourse still fills most of the top 20."
+    },
+    "want to": {
+      "label": "junk",
+      "commentary": "Verb plus infinitive marker. It combines with anything. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "i think": {
+      "label": "junk",
+      "commentary": "A stance marker. Speakers use it with any complement. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "you know": {
+      "label": "acceptable",
+      "commentary": "A fixed discourse marker. Not a domain tag. G^2 score {score} at count {freq} rewards a repeated fixed formula. Dunning's statistic behaves better than chi-square at low counts, and on this list the mass is not low: high-frequency discourse still fills most of the top 20."
+    },
+    "do not": {
+      "label": "junk",
+      "commentary": "Clitic repair of 'don't' plus the auxiliary. Grammatical, not topical. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "of the": {
+      "label": "junk",
+      "commentary": "The highest-frequency grammatical bigram. Dependence here is English, not a domain. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "go to": {
+      "label": "junk",
+      "commentary": "A high-frequency verb plus particle. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "we have": {
+      "label": "junk",
+      "commentary": "Pronoun plus verb, no lexical term. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "council member": {
+      "label": "genuine",
+      "commentary": "The standard role title in this corpus. G^2 score {score} at count {freq} is one of the few domain hits in this top 20. The likelihood ratio still grows with sample size and is non-directional, but it is less hypnotized by frequency-3 exclusivity than PMI or Pearson's chi-square, so a repeated title can surface."
+    },
+    "as well": {
+      "label": "acceptable",
+      "commentary": "A fixed additive discourse formula, deliberately not a domain tag. G^2 score {score} at count {freq} rewards a repeated fixed formula. Dunning's statistic behaves better than chi-square at low counts, and on this list the mass is not low: high-frequency discourse still fills most of the top 20."
+    },
+    "make sure": {
+      "label": "acceptable",
+      "commentary": "A fixed discourse verb. Not a topic tag. G^2 score {score} at count {freq} rewards a repeated fixed formula. Dunning's statistic behaves better than chi-square at low counts, and on this list the mass is not low: high-frequency discourse still fills most of the top 20."
+    },
+    "long beach": {
+      "label": "genuine",
+      "commentary": "City name, non-compositional. G^2 score {score} at count {freq} is one of the few domain hits in this top 20. The likelihood ratio still grows with sample size and is non-directional, but it is less hypnotized by frequency-3 exclusivity than PMI or Pearson's chi-square, so a repeated title can surface."
+    },
+    "the city": {
+      "label": "acceptable",
+      "commentary": "A compositional frame that is constant in this genre. Not gold, because 'city council' and 'city of' carry the name. G^2 score {score} at count {freq} rewards a repeated fixed formula. Dunning's statistic behaves better than chi-square at low counts, and on this list the mass is not low: high-frequency discourse still fills most of the top 20."
+    },
+    "i be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'I am'. A copula artifact, not a collocation. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "mr president": {
+      "label": "genuine",
+      "commentary": "Fixed form of address to the chair. G^2 score {score} at count {freq} is one of the few domain hits in this top 20. The likelihood ratio still grows with sample size and is non-directional, but it is less hypnotized by frequency-3 exclusivity than PMI or Pearson's chi-square, so a repeated title can surface."
+    },
+    "look at": {
+      "label": "junk",
+      "commentary": "Verb plus particle, freely composed. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "kind of": {
+      "label": "acceptable",
+      "commentary": "A fixed hedge. Not a domain tag, and not random. G^2 score {score} at count {freq} rewards a repeated fixed formula. Dunning's statistic behaves better than chi-square at low counts, and on this list the mass is not low: high-frequency discourse still fills most of the top 20."
+    },
+    "we be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'we are'. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "in the": {
+      "label": "junk",
+      "commentary": "Preposition plus determiner, the prototype of grammatical co-occurrence. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    },
+    "and i": {
+      "label": "junk",
+      "commentary": "Coordinator plus first-person pronoun. It is syntax, not a term. G^2 score {score} at count {freq} is large because the observed cell is far from the independence expected count and the count itself is high. The statistic does not point toward association rather than dissociation, and it does not prefer a rare technical term over 'of the'."
+    }
+  },
+  "trigram_pmi": {
+    "vince lombardi trophy": {
+      "label": "genuine",
+      "commentary": "Fixed trophy name, the trigram that contains the bigram 'lombardi trophy'. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "wastewater treatment division": {
+      "label": "genuine",
+      "commentary": "Fixed department name. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "president pro tem": {
+      "label": "genuine",
+      "commentary": "Fixed officer title. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "santa cruz park": {
+      "label": "genuine",
+      "commentary": "Fixed park name. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "maximum building height": {
+      "label": "genuine",
+      "commentary": "Fixed zoning measure. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "real estate master": {
+      "label": "genuine",
+      "commentary": "The start of a master-plan title. Kept on the gold list as that name. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "solid waste advisory": {
+      "label": "genuine",
+      "commentary": "Fixed committee name, truncated before 'committee' but still the conventional start. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "housing task force": {
+      "label": "genuine",
+      "commentary": "Fixed body name. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "vice mayor lowenthal": {
+      "label": "genuine",
+      "commentary": "Title plus surname, the way the clerk addresses that member. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "law enforcement oversight": {
+      "label": "genuine",
+      "commentary": "Fixed oversight-policy trigram. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "low scale residential": {
+      "label": "genuine",
+      "commentary": "Fixed zoning description. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "texas historical commission": {
+      "label": "genuine",
+      "commentary": "Fixed agency name. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "mile high stadium": {
+      "label": "genuine",
+      "commentary": "Fixed stadium name. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "utility economic development": {
+      "label": "genuine",
+      "commentary": "Gold-listed as the tail of the utilities and economic-development committee name. It is institutional, and it is also a window cut out of a longer list. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "urban renewal area": {
+      "label": "genuine",
+      "commentary": "Fixed planning designation. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "national restaurant stock": {
+      "label": "junk",
+      "commentary": "A damaged slice around the National Western Stock Show, not a name anyone uses. Trigram PMI score {score} at count {freq} treats a three-token window as a unit. Committee lists and ASR splices produce exclusive windows that are not phrases. The same low-frequency bias as bigram PMI applies, with even sparser counts."
+    },
+    "favor please signify": {
+      "label": "acceptable",
+      "commentary": "A slice of the voting formula 'in favor please signify'. Procedural, and not the trigram that was gold-listed. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "right utility economic": {
+      "label": "junk",
+      "commentary": "The middle of 'Civil Rights, Utilities, Economic Development'. The comma was tokenized away. Trigram PMI score {score} at count {freq} treats a three-token window as a unit. Committee lists and ASR splices produce exclusive windows that are not phrases. The same low-frequency bias as bigram PMI applies, with even sparser counts."
+    },
+    "human relation board": {
+      "label": "genuine",
+      "commentary": "Fixed board name, with 'relations' lemmatized to 'relation'. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "civil right utility": {
+      "label": "junk",
+      "commentary": "A slice of the committee title 'Civil Rights, Utilities, Economic Development' after the comma disappeared and 'rights' was lemmatized. Trigram PMI score {score} at count {freq} treats a three-token window as a unit. Committee lists and ASR splices produce exclusive windows that are not phrases. The same low-frequency bias as bigram PMI applies, with even sparser counts."
+    }
+  },
+  "nltk_trigram_pmi": {
+    "vince lombardi trophy": {
+      "label": "genuine",
+      "commentary": "Fixed trophy name, the trigram that contains the bigram 'lombardi trophy'. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "wastewater treatment division": {
+      "label": "genuine",
+      "commentary": "Fixed department name. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "santa cruz park": {
+      "label": "genuine",
+      "commentary": "Fixed park name. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "maximum building height": {
+      "label": "genuine",
+      "commentary": "Fixed zoning measure. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "president pro tem": {
+      "label": "genuine",
+      "commentary": "Fixed officer title. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "housing task force": {
+      "label": "genuine",
+      "commentary": "Fixed body name. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "law enforcement oversight": {
+      "label": "genuine",
+      "commentary": "Fixed oversight-policy trigram. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "low scale residential": {
+      "label": "genuine",
+      "commentary": "Fixed zoning description. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "solid waste advisory": {
+      "label": "genuine",
+      "commentary": "Fixed committee name, truncated before 'committee' but still the conventional start. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "real estate master": {
+      "label": "genuine",
+      "commentary": "The start of a master-plan title. Kept on the gold list as that name. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "texas historical commission": {
+      "label": "genuine",
+      "commentary": "Fixed agency name. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "urban renewal area": {
+      "label": "genuine",
+      "commentary": "Fixed planning designation. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "mile high stadium": {
+      "label": "genuine",
+      "commentary": "Fixed stadium name. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "vice mayor lowenthal": {
+      "label": "genuine",
+      "commentary": "Title plus surname, the way the clerk addresses that member. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "utility economic development": {
+      "label": "genuine",
+      "commentary": "Gold-listed as the tail of the utilities and economic-development committee name. It is institutional, and it is also a window cut out of a longer list. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "human relation board": {
+      "label": "genuine",
+      "commentary": "Fixed board name, with 'relations' lemmatized to 'relation'. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "national restaurant stock": {
+      "label": "junk",
+      "commentary": "A damaged slice around the National Western Stock Show, not a name anyone uses. Trigram PMI score {score} at count {freq} treats a three-token window as a unit. Committee lists and ASR splices produce exclusive windows that are not phrases. The same low-frequency bias as bigram PMI applies, with even sparser counts."
+    },
+    "annual action plan": {
+      "label": "acceptable",
+      "commentary": "A real planning document name (annual action plan) that was not put on the gold list. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    },
+    "restaurant stock show": {
+      "label": "junk",
+      "commentary": "Another broken window on the stock-show name, with 'restaurant' intruding. Trigram PMI score {score} at count {freq} treats a three-token window as a unit. Committee lists and ASR splices produce exclusive windows that are not phrases. The same low-frequency bias as bigram PMI applies, with even sparser counts."
+    },
+    "estate master plan": {
+      "label": "acceptable",
+      "commentary": "The tail of 'real estate master plan'. The full name is longer than this trigram window. Trigram PMI score {score} at count {freq} is high because the three position-specific marginals are close to the joint count. Real names survive, and so do fragments of longer names. The frequency floor of 3 is the only thing keeping hapax trigrams out of this list."
+    }
+  },
+  "nltk_trigram_chi_sq": {
+    "vince lombardi trophy": {
+      "label": "genuine",
+      "commentary": "Fixed trophy name, the trigram that contains the bigram 'lombardi trophy'. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "wastewater treatment division": {
+      "label": "genuine",
+      "commentary": "Fixed department name. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "maximum building height": {
+      "label": "genuine",
+      "commentary": "Fixed zoning measure. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "santa cruz park": {
+      "label": "genuine",
+      "commentary": "Fixed park name. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "law enforcement oversight": {
+      "label": "genuine",
+      "commentary": "Fixed oversight-policy trigram. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "president pro tem": {
+      "label": "genuine",
+      "commentary": "Fixed officer title. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "housing task force": {
+      "label": "genuine",
+      "commentary": "Fixed body name. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "mile high stadium": {
+      "label": "genuine",
+      "commentary": "Fixed stadium name. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "low scale residential": {
+      "label": "genuine",
+      "commentary": "Fixed zoning description. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "solid waste advisory": {
+      "label": "genuine",
+      "commentary": "Fixed committee name, truncated before 'committee' but still the conventional start. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "real estate master": {
+      "label": "genuine",
+      "commentary": "The start of a master-plan title. Kept on the gold list as that name. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "texas historical commission": {
+      "label": "genuine",
+      "commentary": "Fixed agency name. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "urban renewal area": {
+      "label": "genuine",
+      "commentary": "Fixed planning designation. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "human relation board": {
+      "label": "genuine",
+      "commentary": "Fixed board name, with 'relations' lemmatized to 'relation'. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "vice mayor lowenthal": {
+      "label": "genuine",
+      "commentary": "Title plus surname, the way the clerk addresses that member. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "utility economic development": {
+      "label": "genuine",
+      "commentary": "Gold-listed as the tail of the utilities and economic-development committee name. It is institutional, and it is also a window cut out of a longer list. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "national restaurant stock": {
+      "label": "junk",
+      "commentary": "A damaged slice around the National Western Stock Show, not a name anyone uses. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "cfd dash two": {
+      "label": "junk",
+      "commentary": "An agenda code tokenized into three pieces ('CFD', the word 'dash', and 'two'). Not a phrase. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "western stock show": {
+      "label": "genuine",
+      "commentary": "Fixed event name (National Western Stock Show), the portion the gold list kept. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    },
+    "national western stock": {
+      "label": "acceptable",
+      "commentary": "The front of 'National Western Stock Show', cut to three tokens. The bigram 'national western' is gold; this trigram was not listed. NLTK trigram chi-square score {score} at count {freq} again rewards exclusive triples. It tracks trigram PMI's names, and it also admits code-like junk such as agenda numbers once their cells are extreme."
+    }
+  },
+  "nltk_trigram_student_t": {
+    "be go to": {
+      "label": "junk",
+      "commentary": "Lemmatized 'is going to' or 'are going to'. The tagger turned the progressive into 'go'. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "i want to": {
+      "label": "junk",
+      "commentary": "The most common request preface in the transcripts. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "thank you mr": {
+      "label": "acceptable",
+      "commentary": "The usual bridge into 'mr president'. Gold lists the bigram 'mr president', not this trigram. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "i do not": {
+      "label": "junk",
+      "commentary": "Lemmatized negation, ordinary syntax. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "be able to": {
+      "label": "junk",
+      "commentary": "Lemmatized 'be able to', an ordinary verb chain. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "just want to": {
+      "label": "junk",
+      "commentary": "Request preface with 'just'. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "that we be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'that we are'. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "one of the": {
+      "label": "junk",
+      "commentary": "A partitive frame. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "i would like": {
+      "label": "junk",
+      "commentary": "A politeness preface, compositionally built. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "would like to": {
+      "label": "junk",
+      "commentary": "Politeness chain, fully compositional. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "and i be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'and I am'. The copula was collapsed to 'be', so the trigram is an artifact. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "thank you for": {
+      "label": "acceptable",
+      "commentary": "The formula plus the preposition that introduces the reason. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "i just want": {
+      "label": "junk",
+      "commentary": "A discourse preface before a request. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "i think that": {
+      "label": "junk",
+      "commentary": "Stance marker plus complementizer. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "make sure that": {
+      "label": "acceptable",
+      "commentary": "The same discourse verb with a complementizer. Not gold. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "that we have": {
+      "label": "junk",
+      "commentary": "A clause opening, not a term. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "and i think": {
+      "label": "junk",
+      "commentary": "A discourse opener, freely composed, not a taggable term. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "go to be": {
+      "label": "junk",
+      "commentary": "Lemmatized 'going to be'. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "you mr president": {
+      "label": "acceptable",
+      "commentary": "The address formula heard as 'thank you, Mr. President', without 'thank'. Gold kept 'mr president'. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    },
+    "we be go": {
+      "label": "junk",
+      "commentary": "Lemmatized 'we are going'. Trigram t score {score} at count {freq} is the bigram t-test's frequency bias in a three-word window. Lemmatized verb chains dominate. The normal approximation is no better for trigram counts than for bigrams."
+    }
+  },
+  "nltk_trigram_likelihood_ratio": {
+    "thank you mr": {
+      "label": "acceptable",
+      "commentary": "The usual bridge into 'mr president'. Gold lists the bigram 'mr president', not this trigram. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "to thank you": {
+      "label": "acceptable",
+      "commentary": "The purpose clause in 'want to thank you'. Discourse, not a topic. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you for": {
+      "label": "acceptable",
+      "commentary": "The formula plus the preposition that introduces the reason. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you councilman": {
+      "label": "acceptable",
+      "commentary": "Politeness plus a title. Fixed as an address, not a topic. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you madam": {
+      "label": "acceptable",
+      "commentary": "Politeness plus a gendered form of address. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you very": {
+      "label": "junk",
+      "commentary": "'Thank you very much' cut before 'much'. The trigram is an incomplete intensifier. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you counsel": {
+      "label": "acceptable",
+      "commentary": "Politeness plus a mis-heard or alternate title 'counsel'. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you counselor": {
+      "label": "acceptable",
+      "commentary": "Politeness plus a title. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you councilmember": {
+      "label": "acceptable",
+      "commentary": "Politeness plus a title. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "so thank you": {
+      "label": "acceptable",
+      "commentary": "Politeness formula with a discourse 'so'. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you councilor": {
+      "label": "acceptable",
+      "commentary": "Politeness plus a title. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you so": {
+      "label": "acceptable",
+      "commentary": "Politeness with an intensifier starting the next bit. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you and": {
+      "label": "junk",
+      "commentary": "'Thank you' plus the coordinator that starts the next clause. The third word is not part of the formula. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you ms": {
+      "label": "acceptable",
+      "commentary": "Politeness plus a title. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you president": {
+      "label": "acceptable",
+      "commentary": "Politeness plus the office. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you councilwoman": {
+      "label": "acceptable",
+      "commentary": "Politeness plus a title. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "i thank you": {
+      "label": "acceptable",
+      "commentary": "A politeness variant of 'thank you', not a domain tag. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you to": {
+      "label": "junk",
+      "commentary": "'Thank you' plus a preposition. The third token is whatever comes next, so the trigram is not fixed. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "say thank you": {
+      "label": "acceptable",
+      "commentary": "A politeness frame, not a topic. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    },
+    "thank you again": {
+      "label": "acceptable",
+      "commentary": "Politeness formula plus 'again'. Trigram G^2 score {score} at count {freq} collapses onto the 'thank you' family. Every extension of a very frequent bigram inherits a huge likelihood ratio. The list is non-directional dependence of one politeness formula, not a set of domain trigrams."
+    }
+  }
+}

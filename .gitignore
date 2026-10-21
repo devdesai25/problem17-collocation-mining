@@ -1,0 +1,33 @@
+# Python Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution & Builds
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Testing & Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Artifacts
+Thumbs.db
+Desktop.ini
+.DS_Store

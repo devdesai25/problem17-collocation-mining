@@ -1,0 +1,145 @@
+phrase,ngram,category,frequency
+affordable housing,2,business,32
+attorney fee,2,business,3
+bargaining agreement,2,business,7
+coffee shop,2,business,3
+fiscal year,2,business,6
+general fund,2,business,9
+low income,2,business,4
+pay sick,2,business,10
+property owner,2,business,11
+real estate,2,business,10
+small business,2,business,4
+special tax,2,business,11
+aaron scott,2,meeting,4
+agenda item,2,meeting,11
+brook tucker,2,meeting,4
+chief rodriguez,2,meeting,3
+city clerk,2,meeting,5
+city council,2,meeting,40
+city manager,2,meeting,11
+consent agenda,2,meeting,4
+council member,2,meeting,69
+council president,2,meeting,8
+councilman lopez,2,meeting,9
+councilmember gossett,2,meeting,11
+councilmember herbold,2,meeting,11
+councilmember lambert,2,meeting,9
+fernandez anderson,2,meeting,7
+john elway,2,meeting,3
+madam chair,2,meeting,15
+madam president,2,meeting,5
+madam secretary,2,meeting,10
+maiden speech,2,meeting,7
+motion carry,2,meeting,8
+motion pass,2,meeting,3
+motion to,2,meeting,15
+move to,2,meeting,17
+mr mayor,2,meeting,7
+mr president,2,meeting,48
+pat bowlen,2,meeting,5
+president flynn,2,meeting,8
+president pro,2,meeting,4
+pro tem,2,meeting,4
+public comment,2,meeting,15
+public hearing,2,meeting,21
+recreation assistant,2,meeting,3
+roll call,2,meeting,4
+staff report,2,meeting,17
+tony frank,2,meeting,3
+vice mayor,2,meeting,16
+vince lombardi,2,meeting,3
+boot camp,2,project,4
+building height,2,project,4
+cabo verde,2,project,13
+cape verde,2,project,8
+capitol hill,2,project,4
+community development,2,project,8
+community facility,2,project,11
+comprehensive plan,2,project,4
+convention center,2,project,10
+denver bronco,2,project,7
+economic development,2,project,10
+el pueblo,2,project,3
+historic preservation,2,project,9
+king county,2,project,25
+land use,2,project,7
+lombardi trophy,2,project,4
+long beach,2,project,37
+master plan,2,project,7
+mile high,2,project,8
+municipal service,2,project,13
+national western,2,project,13
+ocean boulevard,2,project,3
+orange crush,2,project,3
+puget sound,2,project,4
+regional measure,2,project,8
+san francisco,2,project,6
+santa clara,2,project,4
+single family,2,project,10
+south lincoln,2,project,7
+stock show,2,project,20
+subject site,2,project,15
+super bowl,2,project,15
+task force,2,project,3
+urban renewal,2,project,3
+washington hall,2,project,10
+west colfax,2,project,3
+zone district,2,project,22
+civil right,2,technical,8
+civilian oversight,2,technical,3
+domestic violence,2,technical,15
+dry ice,2,technical,8
+fire department,2,technical,7
+human service,2,technical,7
+law enforcement,2,technical,9
+open data,2,technical,20
+police department,2,technical,12
+police officer,2,technical,20
+public health,2,technical,7
+public safety,2,technical,10
+public service,2,technical,17
+racial equity,2,technical,5
+solid waste,2,technical,15
+transfer station,2,technical,3
+wastewater treatment,2,technical,3
+public service funding,3,business,6
+real estate master,3,business,3
+regional affordable housing,3,business,3
+utility economic development,3,business,3
+all in favor,3,meeting,7
+amendment number one,3,meeting,6
+human relation board,3,meeting,4
+in favor please,3,meeting,3
+in term of,3,meeting,25
+motion to adopt,3,meeting,6
+motion to approve,3,meeting,3
+president pro tem,3,meeting,4
+seattle woman commission,3,meeting,4
+the city council,3,meeting,26
+those in favor,3,meeting,19
+vice mayor lowenthal,3,meeting,3
+cape verdean community,3,project,6
+city of denver,3,project,4
+city of seattle,3,project,4
+community facility district,3,project,7
+housing community development,3,project,4
+housing task force,3,project,3
+lgbtq plus community,3,project,3
+low scale residential,3,project,3
+maximum building height,3,project,4
+mile high stadium,3,project,5
+national western center,3,project,3
+santa cruz park,3,project,3
+single family home,3,project,6
+texas historical commission,3,project,3
+urban renewal area,3,project,3
+vince lombardi trophy,3,project,3
+western stock show,3,project,6
+king county code,3,technical,4
+law enforcement oversight,3,technical,7
+municipal service district,3,technical,4
+police officer association,3,technical,4
+solid waste advisory,3,technical,3
+wastewater treatment division,3,technical,3
+zone district standard,3,technical,3

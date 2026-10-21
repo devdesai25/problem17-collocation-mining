@@ -1,0 +1,499 @@
+{
+  "corpus": {
+    "n_documents": 28,
+    "n_sentences": 5318,
+    "n_tokens": 67046,
+    "n_types": 4437,
+    "n_bigram_tokens": 61728,
+    "n_bigram_types": 27358,
+    "n_bigram_types_freq3": 3864,
+    "n_trigram_tokens": 56858,
+    "n_trigram_types": 45410,
+    "n_trigram_types_freq3": 1836,
+    "whitespace_tokens": 66924,
+    "source_name": "MeetingBank",
+    "license": "CC BY-NC-SA 4.0",
+    "retrieval_date": "2026-10-05",
+    "source_url": "https://huggingface.co/datasets/huuuyeah/meetingbank"
+  },
+  "gold": {
+    "n_bigram": 104,
+    "n_trigram": 40,
+    "n_total": 144
+  },
+  "n_convention": {
+    "our_n_bigram": 61728,
+    "nltk_finder_N": 67046,
+    "n_tokens": 67046,
+    "n_sentences": 5318,
+    "finder_N_minus_our_N": 5318
+  },
+  "log_base": {
+    "pmi_median_ratio_nltk_over_scratch": 1.0000000000000002,
+    "pmi_reference_if_natural_log": 0.6931471805599453,
+    "pmi_uses": "log2",
+    "llr_median_ratio_nltk_over_scratch": 1.0,
+    "llr_reference_if_log2": 1.4426950408889634,
+    "llr_uses": "ln",
+    "chi_median_abs_diff_vs_pearson": 0.0,
+    "chi_median_abs_diff_vs_yates": 5.411538667681969,
+    "chi_nltk_matches": "pearson_no_yates",
+    "student_t_median_abs_diff": 0.0,
+    "n_pmi_ratios": 3864,
+    "n_llr_ratios": 3864
+  },
+  "metrics": {
+    "pmi": {
+      "precision_at_20": 0.85,
+      "recall_at_20": 0.16346153846153846,
+      "f1_at_20": 0.2741935483870968,
+      "hits_at_20": 17,
+      "n_candidates_filtered": 3864,
+      "top1_phrase": "coffee shop",
+      "top1_score": 14.328674927327947,
+      "top20_mean_freq": 3.9,
+      "top20_mean_freq_unfiltered": 1.0,
+      "top20_frac_freq_eq_1_unfiltered": 1.0,
+      "top20_frac_freq_le_3_unfiltered": 1.0,
+      "spearman_score_vs_freq_filtered": -0.07055733091978354,
+      "spearman_score_vs_freq_unfiltered": -0.22583106191366037
+    },
+    "pmi2": {
+      "precision_at_20": 0.85,
+      "recall_at_20": 0.16346153846153846,
+      "f1_at_20": 0.2741935483870968,
+      "hits_at_20": 17,
+      "n_candidates_filtered": 3864,
+      "top1_phrase": "coffee shop",
+      "top1_score": 205.31092517303657,
+      "top20_mean_freq": 3.9,
+      "top20_mean_freq_unfiltered": 1.0,
+      "top20_frac_freq_eq_1_unfiltered": 1.0,
+      "top20_frac_freq_le_3_unfiltered": 1.0,
+      "spearman_score_vs_freq_filtered": -0.06964101867945621,
+      "spearman_score_vs_freq_unfiltered": -0.22977558450163046
+    },
+    "pmi3": {
+      "precision_at_20": 0.85,
+      "recall_at_20": 0.16346153846153846,
+      "f1_at_20": 0.2741935483870968,
+      "hits_at_20": 17,
+      "n_candidates_filtered": 3864,
+      "top1_phrase": "coffee shop",
+      "top1_score": 2941.8335058333932,
+      "top20_mean_freq": 3.9,
+      "top20_mean_freq_unfiltered": 1.0,
+      "top20_frac_freq_eq_1_unfiltered": 1.0,
+      "top20_frac_freq_le_3_unfiltered": 1.0,
+      "spearman_score_vs_freq_filtered": -0.07055733091978354,
+      "spearman_score_vs_freq_unfiltered": -0.22583106191366037
+    },
+    "npmi": {
+      "precision_at_20": 0.95,
+      "recall_at_20": 0.18269230769230768,
+      "f1_at_20": 0.3064516129032258,
+      "hits_at_20": 19,
+      "n_candidates_filtered": 3864,
+      "top1_phrase": "boot camp",
+      "top1_score": 1.0,
+      "top20_mean_freq": 7.8,
+      "top20_mean_freq_unfiltered": 1.0,
+      "top20_frac_freq_eq_1_unfiltered": 1.0,
+      "top20_frac_freq_le_3_unfiltered": 1.0,
+      "spearman_score_vs_freq_filtered": 0.015046969165068558,
+      "spearman_score_vs_freq_unfiltered": -0.1616958018571832
+    },
+    "chi_sq": {
+      "precision_at_20": 0.95,
+      "recall_at_20": 0.18269230769230768,
+      "f1_at_20": 0.3064516129032258,
+      "hits_at_20": 19,
+      "n_candidates_filtered": 3864,
+      "top1_phrase": "boot camp",
+      "top1_score": 61728.0,
+      "top20_mean_freq": 8.4,
+      "top20_mean_freq_unfiltered": 1.0,
+      "top20_frac_freq_eq_1_unfiltered": 1.0,
+      "top20_frac_freq_le_3_unfiltered": 1.0,
+      "spearman_score_vs_freq_filtered": 0.2073218091287379,
+      "spearman_score_vs_freq_unfiltered": -0.006618989569778381
+    },
+    "chi_sq_yates": {
+      "precision_at_20": 0.9,
+      "recall_at_20": 0.17307692307692307,
+      "f1_at_20": 0.2903225806451613,
+      "hits_at_20": 18,
+      "n_candidates_filtered": 3864,
+      "top1_phrase": "dry ice",
+      "top1_score": 48223.28103177724,
+      "top20_mean_freq": 8.8,
+      "top20_mean_freq_unfiltered": 6.95,
+      "top20_frac_freq_eq_1_unfiltered": 0.0,
+      "top20_frac_freq_le_3_unfiltered": 0.5,
+      "spearman_score_vs_freq_filtered": 0.2521639396773278,
+      "spearman_score_vs_freq_unfiltered": 0.15388310570062713
+    },
+    "student_t": {
+      "precision_at_20": 0.0,
+      "recall_at_20": 0.0,
+      "f1_at_20": 0.0,
+      "hits_at_20": 0,
+      "n_candidates_filtered": 3864,
+      "top1_phrase": "thank you",
+      "top1_score": 21.656878517528277,
+      "top20_mean_freq": 203.0,
+      "top20_mean_freq_unfiltered": 203.0,
+      "top20_frac_freq_eq_1_unfiltered": 0.0,
+      "top20_frac_freq_le_3_unfiltered": 0.0,
+      "spearman_score_vs_freq_filtered": 0.5878082880919936,
+      "spearman_score_vs_freq_unfiltered": 0.5007181717598539
+    },
+    "likelihood_ratio": {
+      "precision_at_20": 0.15,
+      "recall_at_20": 0.028846153846153848,
+      "f1_at_20": 0.04838709677419355,
+      "hits_at_20": 3,
+      "n_candidates_filtered": 3864,
+      "top1_phrase": "thank you",
+      "top1_score": 3890.2927006051273,
+      "top20_mean_freq": 166.5,
+      "top20_mean_freq_unfiltered": 166.5,
+      "top20_frac_freq_eq_1_unfiltered": 0.0,
+      "top20_frac_freq_le_3_unfiltered": 0.0,
+      "spearman_score_vs_freq_filtered": 0.3860063763749228,
+      "spearman_score_vs_freq_unfiltered": 0.23817850627697665
+    },
+    "nltk_pmi": {
+      "precision_at_20": 0.8,
+      "recall_at_20": 0.15384615384615385,
+      "f1_at_20": 0.25806451612903225,
+      "hits_at_20": 16,
+      "n_candidates_filtered": 3864,
+      "top1_phrase": "coffee shop",
+      "top1_score": 14.447901141572448,
+      "top20_mean_freq": 3.85,
+      "top20_mean_freq_unfiltered": 1.0,
+      "top20_frac_freq_eq_1_unfiltered": 1.0,
+      "top20_frac_freq_le_3_unfiltered": 1.0,
+      "spearman_score_vs_freq_filtered": -0.0641501637863472,
+      "spearman_score_vs_freq_unfiltered": -0.22089521960021105
+    },
+    "nltk_chi_sq": {
+      "precision_at_20": 0.95,
+      "recall_at_20": 0.18269230769230768,
+      "f1_at_20": 0.3064516129032258,
+      "hits_at_20": 19,
+      "n_candidates_filtered": 3864,
+      "top1_phrase": "boot camp",
+      "top1_score": 67046.0,
+      "top20_mean_freq": 8.35,
+      "top20_mean_freq_unfiltered": 1.15,
+      "top20_frac_freq_eq_1_unfiltered": 0.95,
+      "top20_frac_freq_le_3_unfiltered": 0.95,
+      "spearman_score_vs_freq_filtered": 0.20766336511004924,
+      "spearman_score_vs_freq_unfiltered": -0.00560396093275127
+    },
+    "nltk_student_t": {
+      "precision_at_20": 0.0,
+      "recall_at_20": 0.0,
+      "f1_at_20": 0.0,
+      "hits_at_20": 0,
+      "n_candidates_filtered": 3864,
+      "top1_phrase": "thank you",
+      "top1_score": 21.65330499019499,
+      "top20_mean_freq": 203.0,
+      "top20_mean_freq_unfiltered": 203.0,
+      "top20_frac_freq_eq_1_unfiltered": 0.0,
+      "top20_frac_freq_le_3_unfiltered": 0.0,
+      "spearman_score_vs_freq_filtered": 0.5713610402004993,
+      "spearman_score_vs_freq_unfiltered": 0.4829535676074019
+    },
+    "nltk_likelihood_ratio": {
+      "precision_at_20": 0.15,
+      "recall_at_20": 0.028846153846153848,
+      "f1_at_20": 0.04838709677419355,
+      "hits_at_20": 3,
+      "n_candidates_filtered": 3864,
+      "top1_phrase": "thank you",
+      "top1_score": 3845.4231903159216,
+      "top20_mean_freq": 175.2,
+      "top20_mean_freq_unfiltered": 175.2,
+      "top20_frac_freq_eq_1_unfiltered": 0.0,
+      "top20_frac_freq_le_3_unfiltered": 0.0,
+      "spearman_score_vs_freq_filtered": 0.38110330782879215,
+      "spearman_score_vs_freq_unfiltered": 0.23058308706151026
+    }
+  },
+  "best_metric": "npmi",
+  "best_f1": 0.3064516129032258,
+  "n_common_candidates": 3864,
+  "spearman_lowest": [
+    {
+      "a": "pmi2",
+      "b": "student_t",
+      "rho": 0.6137160881871395
+    },
+    {
+      "a": "pmi2",
+      "b": "nltk_student_t",
+      "rho": 0.6222944759230732
+    },
+    {
+      "a": "student_t",
+      "b": "nltk_pmi",
+      "rho": 0.650761300312732
+    },
+    {
+      "a": "pmi",
+      "b": "student_t",
+      "rho": 0.6523856240996475
+    },
+    {
+      "a": "pmi3",
+      "b": "student_t",
+      "rho": 0.6523856240996475
+    },
+    {
+      "a": "pmi",
+      "b": "nltk_student_t",
+      "rho": 0.6608555896216117
+    }
+  ],
+  "spearman_highest": [
+    {
+      "a": "pmi",
+      "b": "pmi3",
+      "rho": 1.0
+    },
+    {
+      "a": "chi_sq",
+      "b": "chi_sq_yates",
+      "rho": 0.9984369949169231
+    },
+    {
+      "a": "pmi3",
+      "b": "npmi",
+      "rho": 0.9929434721025603
+    },
+    {
+      "a": "pmi",
+      "b": "npmi",
+      "rho": 0.9929434721025603
+    },
+    {
+      "a": "pmi3",
+      "b": "nltk_pmi",
+      "rho": 0.9908607609422898
+    },
+    {
+      "a": "pmi",
+      "b": "nltk_pmi",
+      "rho": 0.9908607609422898
+    }
+  ],
+  "unique_top20": [
+    {
+      "phrase": "cape verdean",
+      "metric": "chi_sq_yates",
+      "score": 28339.11333366055,
+      "freq": 12
+    },
+    {
+      "phrase": "council member",
+      "metric": "likelihood_ratio",
+      "score": 651.6960110647959,
+      "freq": 69
+    },
+    {
+      "phrase": "as well",
+      "metric": "likelihood_ratio",
+      "score": 630.0288581787329,
+      "freq": 54
+    },
+    {
+      "phrase": "make sure",
+      "metric": "likelihood_ratio",
+      "score": 585.9250898154265,
+      "freq": 52
+    },
+    {
+      "phrase": "mr president",
+      "metric": "likelihood_ratio",
+      "score": 521.9212539271955,
+      "freq": 48
+    },
+    {
+      "phrase": "look at",
+      "metric": "likelihood_ratio",
+      "score": 477.8332618142121,
+      "freq": 58
+    },
+    {
+      "phrase": "kind of",
+      "metric": "likelihood_ratio",
+      "score": 455.14210094576794,
+      "freq": 64
+    },
+    {
+      "phrase": "in the",
+      "metric": "student_t",
+      "score": 12.60109674701918,
+      "freq": 256
+    },
+    {
+      "phrase": "we be",
+      "metric": "student_t",
+      "score": 12.314481225263863,
+      "freq": 234
+    },
+    {
+      "phrase": "this be",
+      "metric": "student_t",
+      "score": 9.427018727955,
+      "freq": 148
+    },
+    {
+      "phrase": "there be",
+      "metric": "student_t",
+      "score": 9.423957752767896,
+      "freq": 114
+    },
+    {
+      "phrase": "it be",
+      "metric": "student_t",
+      "score": 9.07175501942115,
+      "freq": 137
+    }
+  ],
+  "n_unique_top20": 14,
+  "finder_gaps": {
+    "pmi": {
+      "phrase": "yes thank",
+      "freq": 3,
+      "scratch_score": 5.810349619637082,
+      "nltk_finder_score": 2.7154510285287348,
+      "abs_diff_finder": 3.094898591108347
+    },
+    "chi_sq": {
+      "phrase": "brook tucker",
+      "freq": 4,
+      "scratch_score": 35271.428460334944,
+      "nltk_finder_score": 19500.945237858476,
+      "abs_diff_finder": 15770.483222476469
+    },
+    "student_t": {
+      "phrase": "the i",
+      "freq": 4,
+      "scratch_score": -27.69658825816485,
+      "nltk_finder_score": -39.53250753214211,
+      "abs_diff_finder": 11.835919273977261
+    },
+    "likelihood_ratio": {
+      "phrase": "and i",
+      "freq": 271,
+      "scratch_score": 602.3973009294416,
+      "nltk_finder_score": 426.35729176271576,
+      "abs_diff_finder": 176.04000916672584
+    }
+  },
+  "stopword_ablation": {
+    "n_tokens_without_stopwords": 31812,
+    "n_bigram_tokens_without_stopwords": 26632,
+    "gold_bigrams_containing_a_stopword": 2,
+    "gold_bigrams_blocked_examples": "motion to, move to",
+    "pmi_precision_at_20": 0.8,
+    "pmi_recall_at_20": 0.153846,
+    "pmi_f1_at_20": 0.258065,
+    "pmi_hits_at_20": 16,
+    "student_t_precision_at_20": 0.55,
+    "student_t_recall_at_20": 0.105769,
+    "student_t_f1_at_20": 0.177419,
+    "student_t_hits_at_20": 11,
+    "likelihood_ratio_precision_at_20": 0.65,
+    "likelihood_ratio_recall_at_20": 0.125,
+    "likelihood_ratio_f1_at_20": 0.209677,
+    "likelihood_ratio_hits_at_20": 13,
+    "chi_sq_precision_at_20": 0.85,
+    "chi_sq_recall_at_20": 0.163462,
+    "chi_sq_f1_at_20": 0.274194,
+    "chi_sq_hits_at_20": 17
+  },
+  "trigram": {
+    "metrics": {
+      "trigram_pmi": {
+        "precision_at_20": 0.8,
+        "recall_at_20": 0.4,
+        "f1_at_20": 0.5333333333333333,
+        "hits_at_20": 16,
+        "n_candidates": 1836,
+        "top1_phrase": "vince lombardi trophy",
+        "top1_score": 27.268223369423968,
+        "top20_mean_freq": 3.45,
+        "top20_mean_freq_unfiltered": 1.0,
+        "top20_frac_freq_eq_1_unfiltered": 1.0
+      },
+      "nltk_trigram_pmi": {
+        "precision_at_20": 0.8,
+        "recall_at_20": 0.4,
+        "f1_at_20": 0.5333333333333333,
+        "hits_at_20": 16,
+        "n_candidates": 1836,
+        "top1_phrase": "vince lombardi trophy",
+        "top1_score": 27.743799189699846,
+        "top20_mean_freq": 3.45,
+        "top20_mean_freq_unfiltered": 1.0,
+        "top20_frac_freq_eq_1_unfiltered": 1.0
+      },
+      "nltk_trigram_chi_sq": {
+        "precision_at_20": 0.85,
+        "recall_at_20": 0.425,
+        "f1_at_20": 0.5666666666666667,
+        "hits_at_20": 17,
+        "n_candidates": 1836,
+        "top1_phrase": "vince lombardi trophy",
+        "top1_score": 674278272.0495522,
+        "top20_mean_freq": 4.05,
+        "top20_mean_freq_unfiltered": 1.0,
+        "top20_frac_freq_eq_1_unfiltered": 1.0
+      },
+      "nltk_trigram_student_t": {
+        "precision_at_20": 0.0,
+        "recall_at_20": 0.0,
+        "f1_at_20": 0.0,
+        "hits_at_20": 0,
+        "n_candidates": 1836,
+        "top1_phrase": "be go to",
+        "top1_score": 9.440289166780811,
+        "top20_mean_freq": 46.85,
+        "top20_mean_freq_unfiltered": 46.85,
+        "top20_frac_freq_eq_1_unfiltered": 0.0
+      },
+      "nltk_trigram_likelihood_ratio": {
+        "precision_at_20": 0.0,
+        "recall_at_20": 0.0,
+        "f1_at_20": 0.0,
+        "hits_at_20": 0,
+        "n_candidates": 1836,
+        "top1_phrase": "thank you mr",
+        "top1_score": 4318.813769253472,
+        "top20_mean_freq": 14.75,
+        "top20_mean_freq_unfiltered": 14.4,
+        "top20_frac_freq_eq_1_unfiltered": 0.05
+      }
+    },
+    "nltk_finder_N": 67046
+  },
+  "spearman_selected": {
+    "pmi_student_t": 0.6523856240996475,
+    "pmi_likelihood_ratio": 0.7848004631675256,
+    "pmi_chi_sq": 0.9128537956813544,
+    "pmi_pmi2": 0.9711026116095954,
+    "pmi_npmi": 0.9929434721025603,
+    "pmi_nltk_pmi": 0.9908607609422898,
+    "chi_sq_nltk_chi_sq": 0.9898142367987924,
+    "student_t_nltk_student_t": 0.989956624377766,
+    "likelihood_ratio_nltk_likelihood_ratio": 0.9886473581787854,
+    "chi_sq_yates": 0.9984369949169231,
+    "chi_sq_likelihood_ratio": 0.9643642737525103
+  }
+}

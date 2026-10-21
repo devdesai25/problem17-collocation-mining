@@ -1,0 +1,53 @@
+{
+  "n_convention": {
+    "our_n_bigram": 61728,
+    "nltk_finder_N": 67046,
+    "n_tokens": 67046,
+    "n_sentences": 5318,
+    "finder_N_minus_our_N": 5318
+  },
+  "log_base": {
+    "pmi_median_ratio_nltk_over_scratch": 1.0000000000000002,
+    "pmi_reference_if_natural_log": 0.6931471805599453,
+    "pmi_uses": "log2",
+    "llr_median_ratio_nltk_over_scratch": 1.0,
+    "llr_reference_if_log2": 1.4426950408889634,
+    "llr_uses": "ln",
+    "chi_median_abs_diff_vs_pearson": 0.0,
+    "chi_median_abs_diff_vs_yates": 5.411538667681969,
+    "chi_nltk_matches": "pearson_no_yates",
+    "student_t_median_abs_diff": 0.0,
+    "n_pmi_ratios": 3864,
+    "n_llr_ratios": 3864
+  },
+  "finder_gaps": {
+    "pmi": {
+      "phrase": "yes thank",
+      "freq": 3,
+      "scratch_score": 5.810349619637082,
+      "nltk_finder_score": 2.7154510285287348,
+      "abs_diff_finder": 3.094898591108347
+    },
+    "chi_sq": {
+      "phrase": "brook tucker",
+      "freq": 4,
+      "scratch_score": 35271.428460334944,
+      "nltk_finder_score": 19500.945237858476,
+      "abs_diff_finder": 15770.483222476469
+    },
+    "student_t": {
+      "phrase": "the i",
+      "freq": 4,
+      "scratch_score": -27.69658825816485,
+      "nltk_finder_score": -39.53250753214211,
+      "abs_diff_finder": 11.835919273977261
+    },
+    "likelihood_ratio": {
+      "phrase": "and i",
+      "freq": 271,
+      "scratch_score": 602.3973009294416,
+      "nltk_finder_score": 426.35729176271576,
+      "abs_diff_finder": 176.04000916672584
+    }
+  }
+}

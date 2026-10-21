@@ -1,0 +1,266 @@
+{
+  "source_file": "test.json",
+  "hf_repo": "huuuyeah/meetingbank",
+  "selection": {
+    "min_whitespace_tokens": 1400,
+    "max_whitespace_tokens": 3200,
+    "target_whitespace_tokens": 65000,
+    "order": "round-robin over city name ascending; within city, uid ascending"
+  },
+  "files": [
+    {
+      "filename": "01_alamedacc_01072020_2020_7531.txt",
+      "uid": "AlamedaCC_01072020_2020-7531",
+      "city": "AlamedaCC",
+      "whitespace_tokens": 2641,
+      "bytes": 15754,
+      "sha256": "69fd6a7625a8b648f3d52508096d3eae221bfb3c2124d9b130c3967f578181d1",
+      "summary": "Public Hearing to Consider Approving the Housing and Community Development Needs Statement and Priority Needs and Objectives for the Community Development Block Grant (CDBG) Annual and Five-Year Plans. (Housing 236)"
+    },
+    {
+      "filename": "02_bostoncc_03022022_2022_0323.txt",
+      "uid": "BostonCC_03022022_2022-0323",
+      "city": "BostonCC",
+      "whitespace_tokens": 2884,
+      "bytes": 16643,
+      "sha256": "52807608d863d836dae1bff4beff79a994c357f6434890ea532f90c941545b6d",
+      "summary": "Order for a hearing to discuss restoring municipal voting rights to immigrants with legal status."
+    },
+    {
+      "filename": "03_denvercitycouncil_01092017_16_1125.txt",
+      "uid": "DenverCityCouncil_01092017_16-1125",
+      "city": "DenverCityCouncil",
+      "whitespace_tokens": 3081,
+      "bytes": 18134,
+      "sha256": "e0ff0f8ff94ff08534ebd143ed0725770723c80472ffd24701e69f7b8e7e750a",
+      "summary": "A bill for an ordinance changing the zoning classification for 1154, 1156, 1160, 1164, and 1166 South Lincoln Street. Rezones property located at 1154, 1156, 1160, 1164, and 1166 South Lincoln from R-MU-20 to U-RH-2.5 (residential mixed-use to urban row house) with waivers, in Council District 7. The Committee approved filing this bill at its meeting on 11-29-16."
+    },
+    {
+      "filename": "04_kingcountycc_02032021_2021_0008.txt",
+      "uid": "KingCountyCC_02032021_2021-0008",
+      "city": "KingCountyCC",
+      "whitespace_tokens": 2998,
+      "bytes": 17202,
+      "sha256": "8bc82d78af932c8572b960354df8b87ded74e495a3b40a729034bfdd9b3e5d12",
+      "summary": "A MOTION confirming the executive's appointment of Adam Alsobrook, who resides in council district two, to the King County landmarks commission."
+    },
+    {
+      "filename": "05_longbeachcc_01172017_17_0030.txt",
+      "uid": "LongBeachCC_01172017_17-0030",
+      "city": "LongBeachCC",
+      "whitespace_tokens": 2701,
+      "bytes": 14656,
+      "sha256": "9ee97580be358d47c8d2eee344d8263e9b59b94be91afc32eef052bd6f2409e8",
+      "summary": "Recommendation to receive and file a report and presentation on DataLB, the City\u2019s new open data portal.  (Citywide)"
+    },
+    {
+      "filename": "06_seattlecitycouncil_02042019_res_31861.txt",
+      "uid": "SeattleCityCouncil_02042019_Res 31861",
+      "city": "SeattleCityCouncil",
+      "whitespace_tokens": 2696,
+      "bytes": 15550,
+      "sha256": "857956bd894878b9affb1a0ae8211d55470352b0a028049e53953618b602e8d8",
+      "summary": "A RESOLUTION recognizing the harms that evictions from housing have on tenants and marginalized communities and describing the City Council\u2019s plan to help avoid and mitigate those harms."
+    },
+    {
+      "filename": "07_alamedacc_02052019_2019_6387.txt",
+      "uid": "AlamedaCC_02052019_2019-6387",
+      "city": "AlamedaCC",
+      "whitespace_tokens": 1822,
+      "bytes": 10085,
+      "sha256": "94ceb6a51f0455cfb03729068519dd6989020850d3bfd2203052a59c55b62d04",
+      "summary": "Recommendation to Authorize the Interim City Manager to Negotiate and Execute a Third Amendment to the Agreement with the County of Alameda Extending the Term of the Community Paramedicine Pilot Program by 12 Months; and Adoption of Resolution Amending the Fiscal Year 2018-19 Budget for the Fire Grants Fund by $125,000 for Costs Associated with the Extension of the Community Paramedicine Pilot Program and the General Fund by $125,000 for the City Contribution to Fund the Program. (Fire 220)"
+    },
+    {
+      "filename": "08_bostoncc_03302022_2022_0438.txt",
+      "uid": "BostonCC_03302022_2022-0438",
+      "city": "BostonCC",
+      "whitespace_tokens": 1405,
+      "bytes": 7995,
+      "sha256": "9419c52fd40cae64baef5819bcb4cea59c8c387d7c5a9aea6b7a9383c65417f4",
+      "summary": "Resolution in support of H.3457/S.2309, An Act relative to electric bicycles. On motion of Councilor Breadon, Rule 12 was invoked to include Councilors Louijeune and Bok as co-sponsors."
+    },
+    {
+      "filename": "09_denvercitycouncil_01102022_22_0041.txt",
+      "uid": "DenverCityCouncil_01102022_22-0041",
+      "city": "DenverCityCouncil",
+      "whitespace_tokens": 2161,
+      "bytes": 12233,
+      "sha256": "8c8c9d1d15c3bed7b2c2d42b6c499b60b27c33c4434a68d7618e8a7a0da33911",
+      "summary": "A proclamation welcoming the 116th National Western Stock Show, Rodeo and Horse Show to Denver and Celebrating the Opening of the CSU Spur campus as part of the reimagined National Western Center."
+    },
+    {
+      "filename": "10_kingcountycc_02032021_2021_0013.txt",
+      "uid": "KingCountyCC_02032021_2021-0013",
+      "city": "KingCountyCC",
+      "whitespace_tokens": 3198,
+      "bytes": 18257,
+      "sha256": "6ee5f93cdf44483133fba80c42ace80a813e7eb1646e52e115a88eef70717f0e",
+      "summary": "A MOTION confirming the executive's appointment of Wendy Weiker, who resides in council district six, to the King County solid waste advisory committee, filling the waste management industry representative position."
+    },
+    {
+      "filename": "11_longbeachcc_02072017_17_0063.txt",
+      "uid": "LongBeachCC_02072017_17-0063",
+      "city": "LongBeachCC",
+      "whitespace_tokens": 2877,
+      "bytes": 15724,
+      "sha256": "f6d37184b2ed685fd13049f9ce9920b8174b211031cf159240e6d229129a2318",
+      "summary": "Recommendation to adopt resolution approving the 2016-2019 Memorandum of Understanding with the Long Beach Police Officers Association.  (Citywide)"
+    },
+    {
+      "filename": "12_seattlecitycouncil_02182020_res_31934.txt",
+      "uid": "SeattleCityCouncil_02182020_Res 31934",
+      "city": "SeattleCityCouncil",
+      "whitespace_tokens": 1631,
+      "bytes": 9259,
+      "sha256": "c2a1e259a5b48476784117548569bf7322c076edec05496491aacb368ce17a0d",
+      "summary": "A RESOLUTION supporting the taxation of big businesses in Seattle to fund housing and essential services, urging the Washington State Legislature to oppose any \u201cpreemption\u201d or other ban on Seattle\u2019s ability to raise revenue through big business taxes or other progressive revenue sources, and requesting the Office of Intergovernmental Relations communicate this resolution to Washington State Lawmakers."
+    },
+    {
+      "filename": "13_alamedacc_04172018_2018_5378.txt",
+      "uid": "AlamedaCC_04172018_2018-5378",
+      "city": "AlamedaCC",
+      "whitespace_tokens": 1931,
+      "bytes": 10687,
+      "sha256": "3ad9a5c919b843c4dd58f2739c9999c8cbe2506e08f866d31bec9b47fda79e6b",
+      "summary": "Adoption of Resolution Supporting Regional Measure 3 (RM 3), the Bay Area Traffic Relief Plan; and Adoption of Resolution Supporting Proposition 69 and Opposing Senate Bill 1 (SB 1) Repeal, to Protect Local Transportation Improvements in SB 1. (Transportation 4227287)"
+    },
+    {
+      "filename": "14_bostoncc_04062022_2022_0467.txt",
+      "uid": "BostonCC_04062022_2022-0467",
+      "city": "BostonCC",
+      "whitespace_tokens": 2382,
+      "bytes": 13229,
+      "sha256": "2ecf90f19a994f020a18b7dc8bf81c214930e89ac52bc92e24c3f7d441cd8e1b",
+      "summary": "Order for a hearing to discuss pest control in the City of Boston. On motion of Councilors Flynn and Breadon, Rule 12 was invoked to include Councilor Murphy as co-sponsor. Referred to the Committee on City Services and Innovation Technology."
+    },
+    {
+      "filename": "15_denvercitycouncil_01122015_14_1097.txt",
+      "uid": "DenverCityCouncil_01122015_14-1097",
+      "city": "DenverCityCouncil",
+      "whitespace_tokens": 1482,
+      "bytes": 8452,
+      "sha256": "5d5fbcf21c31b76b682f6746a48d461b366a76af2b8e4832d8b0ef413e2c1dde",
+      "summary": "A bill for an Ordinance authorizing and approving an amendment to the St. Anthony Urban Redevelopment Plan to add the Sloans Block 7 East Project and to Create the Sloans Block 7 East Sales Tax Increment Area. (FINANCE & SERVICES) Approves an amendment to the St. Anthony Urban Redevelopment Plan for the Sloans Block 7 East Project in Council District 1. The Committee approved filing this bill at its meeting on 12-16-14."
+    },
+    {
+      "filename": "16_kingcountycc_03292017_2017_0139.txt",
+      "uid": "KingCountyCC_03292017_2017-0139",
+      "city": "KingCountyCC",
+      "whitespace_tokens": 2674,
+      "bytes": 15314,
+      "sha256": "6042ba187cc17a0b05f3a41293d4a6ccb7b14e1d8d01d48b531679714bc37d89",
+      "summary": "AN ORDINANCE relating to the office of law enforcement oversight; amending Ordinance 15611, Section 2, as amended, and K.C.C. 2.75.010, Ordinance 15611, Section 3, as amended, and K.C.C. 2.75.020, Ordinance 15611, Section 4, as amended, and K.C.C. 2.75.030, Ordinance 15611, Section 5, as amended, and K.C.C. 2.75.040, Ordinance 15611, Section 8, as amended, and K.C.C. 2.75.070 and Ordinance 1438, Section 3(c), as amended, and K.C.C. 2.16.060, adding new sections to K.C.C. chapter 2.75 and repealing Ordinance 15611, Section 6, as amended, and K.C.C. 2.75.050 and Ordinance 15611, Section 7, as amended, and K.C.C. 2.75.060."
+    },
+    {
+      "filename": "17_longbeachcc_02092021_21_0103.txt",
+      "uid": "LongBeachCC_02092021_21-0103",
+      "city": "LongBeachCC",
+      "whitespace_tokens": 1568,
+      "bytes": 8612,
+      "sha256": "6ac73a147190c344cdc8b027a3773b31ab542cfea989c7a6c04b163205f34457",
+      "summary": "Recommendation to receive and file an amendment to Munis Contract No. 3190000026 (Contract No. 35169), with GSSI, Inc., dba General Security Services, of Wilmington, CA, for providing security guard services, to increase the contract amount by $963,600, and extend the term to February 20, 2021, made pursuant to Chapters 2.69 and 2.85 of the Long Beach Municipal Code (LBMC) and in response to the proclaimed emergency due to the COVID-19 pandemic; and Authorize City Manager, or designee, to execute all documents necessary to amend Contract No. 35169 with GSSI, Inc., dba General Security Services, of Wilmington, CA, for providing security guard services, to increase the annual contract amount to $909,000, with an additional 20 percent contingency of $181,800, for a total annual contract amount of $1,090,800, plus an additional annual amount of $300,000 for emergency services related to the COVID-19 pandemic response efforts, as needed; and, reaffirm the original City Council adopted Specifications No. ITB LB18-123, including the contract term of two years, with the option to renew fo"
+    },
+    {
+      "filename": "18_seattlecitycouncil_03162020_cb_119755.txt",
+      "uid": "SeattleCityCouncil_03162020_CB 119755",
+      "city": "SeattleCityCouncil",
+      "whitespace_tokens": 3046,
+      "bytes": 17596,
+      "sha256": "9c1aa1b6a313dbc569fe4de20faac4c6248a69f18cd7ff4303a243bcaaf05414",
+      "summary": "AN ORDINANCE appropriating money to pay certain audited claims for the week of March 2, 2020 through March 6, 2020 and ordering the payment thereof."
+    },
+    {
+      "filename": "19_alamedacc_04212015_2015_1500.txt",
+      "uid": "AlamedaCC_04212015_2015-1500",
+      "city": "AlamedaCC",
+      "whitespace_tokens": 2642,
+      "bytes": 14743,
+      "sha256": "6830083b789f96c6a1bfd8085ed38c124da68e06e47d76fed9f0e5713a69479b",
+      "summary": "Summary Title: Complete Actions to Expand Municipal Services and Territory for Financing District at Alameda Landing and Levy of Corresponding Special Tax - Community Facilities District (CFD) No. 13-2 (Alameda Landing Municipal Services District) Public Hearing to Consider the Expansion of Municipal Services by Adoption of Resolution Calling Special Election Regarding Alteration of the Municipal Services to be Financed by Community Facilities District No. 13-2 (Alameda Landing Municipal Services District); Conducting Special Election; and Adoption of Resolution Declaring Results of Special Election in Community Facilities District No. 13-2 (Alameda Landing Municipal Services District), Determining that the Alteration of Municipal Services to be Financed by the District are Lawfully Authorized, and Directing Recording of an Amendment to Notice of Special Tax Lien; and Public Hearing to Consider the Expansion of Territory by Adoption of Resolution of Annexation of Territory to the City of Alameda Community Facilities District No. 13-2 (Alameda Landing Municipal Services Distr"
+    },
+    {
+      "filename": "20_bostoncc_06082022_2022_0726.txt",
+      "uid": "BostonCC_06082022_2022-0726",
+      "city": "BostonCC",
+      "whitespace_tokens": 2667,
+      "bytes": 14598,
+      "sha256": "8995aa8249b68557cb42d5030f4ec642fa18a7ac7f4b2bf41e5e938303ec5416",
+      "summary": "Resolution designating June 2022 as \u201cLGBTQIA+ Pride Month\u201d. Councilors Breadon and Louijuene rule 12 was invoked to include Councilor Bok as co-sponsors. motion of Councilors Breadon, Louijuene and Bok, the rules were suspended; the resolution was adopted"
+    },
+    {
+      "filename": "21_denvercitycouncil_01292018_18_0009.txt",
+      "uid": "DenverCityCouncil_01292018_18-0009",
+      "city": "DenverCityCouncil",
+      "whitespace_tokens": 1913,
+      "bytes": 10373,
+      "sha256": "638c2ab83e7e6937b78742258a81403c088408cbb6a6e142a855f12c01eed95e",
+      "summary": "A bill for an ordinance approving a proposed Purchase and Sale Agreement between the City and County of Denver and Raiatea, LLP for the sale of property located at approximately 8101 East 40th Avenue and Ulster Street. Approves a purchase and sale agreement with Raiatea, LLP for $10,000 for the sale of approximately 11,970 square feet of surplus City-owned vacant land located at approximately 8101 East 40th Avenue and Ulster Street in Council District 9 (FINAN-201737898-00). The last regularly scheduled Council meeting within the 30-day review period is on 2-20-18. The Committee approved filing this bill by consent on 1-16-18."
+    },
+    {
+      "filename": "22_kingcountycc_04152019_2019_0103.txt",
+      "uid": "KingCountyCC_04152019_2019-0103",
+      "city": "KingCountyCC",
+      "whitespace_tokens": 1438,
+      "bytes": 8315,
+      "sha256": "1214d902226f140a27ddd760b9c2e4ca40fa4016a748e6216530ad0264d7f3bc",
+      "summary": "A MOTION confirming the appointment of King Khazm to the King County cultural development authority (4Culture) board."
+    },
+    {
+      "filename": "23_longbeachcc_02162016_16_0138.txt",
+      "uid": "LongBeachCC_02162016_16-0138",
+      "city": "LongBeachCC",
+      "whitespace_tokens": 2479,
+      "bytes": 13673,
+      "sha256": "33039c6919e4dbf420eaf654f07dcd175c4bf55f0837e2751473de3d695dff1d",
+      "summary": "Recommendation to adopt Plans and Specifications No. R-6942 for construction of the Convention Center-Performing Arts Center Pedestrian Bridge on Seaside Way project; award the contract to Powell Constructors, Inc., of Fontana, CA, in the amount of $8,636,496, and authorize a 7.5 percent contingency in the amount of $647,737, for a total contract amount not to exceed $9,284,233; authorize City Manager, or designee, to execute all documents necessary to enter into the contract, including any necessary amendments thereto; and accept Categorical Exemption No. 13-118.  (District 2)"
+    },
+    {
+      "filename": "24_seattlecitycouncil_03182019_res_31871.txt",
+      "uid": "SeattleCityCouncil_03182019_Res 31871",
+      "city": "SeattleCityCouncil",
+      "whitespace_tokens": 2913,
+      "bytes": 17144,
+      "sha256": "9c3d6dcb8cc8b61622d79f8d94c1f7aeba86e6e0681bb2a6e3b4857dbe27f4dc",
+      "summary": "A RESOLUTION endorsing the final report and recommendations of the Regional Affordable Housing Task Force."
+    },
+    {
+      "filename": "25_alamedacc_05072019_2019_6796.txt",
+      "uid": "AlamedaCC_05072019_2019-6796",
+      "city": "AlamedaCC",
+      "whitespace_tokens": 1866,
+      "bytes": 10038,
+      "sha256": "3181e09893dbb607a731018f540a6808afcbd45d97fcd471483da5b454e6ac48",
+      "summary": "Recommendation to Authorize the City Manager to Execute an Agreement with MCK Services, Inc. for the Repair and Resurfacing of Portions of Otis Drive and Pacific Avenue, No. P.W. 03-15-02, in an Amount, Including Contingency, Not to Exceed $1,392,537.60; and Adoption of Resolution Amending the Fiscal Year 2018-19 Capital Improvement Program Budget by Defunding Revenue and Appropriations in the Pavement Management Project 91810 by $750,000 Each and Increasing Revenue and Appropriations for Otis Drive and Pacific Avenue Resurfacing Project 91347 by $750,000 Each. (Public Works 310)"
+    },
+    {
+      "filename": "26_bostoncc_06292022_2022_0816.txt",
+      "uid": "BostonCC_06292022_2022-0816",
+      "city": "BostonCC",
+      "whitespace_tokens": 2643,
+      "bytes": 14722,
+      "sha256": "46bd6747e97484373a1a60814b52caebe0c7b76b2ea1a3c230ac60e869a82e39",
+      "summary": "Resolution recognizing July 5th As Dia Di Kabuverdianus Na Boston aka \"Boston Cabo Verdean's Day\". On motion of Councilor Fernandes Anderson, Rule 12 was invoked to include Councilors Worrell and Baker as co-sponsors. On motion of Councilors Fernandes Anderson, Worrell and Baker, the rules were suspended; the resolution was adopted."
+    },
+    {
+      "filename": "27_denvercitycouncil_02012016_16_0071.txt",
+      "uid": "DenverCityCouncil_02012016_16-0071",
+      "city": "DenverCityCouncil",
+      "whitespace_tokens": 3016,
+      "bytes": 16264,
+      "sha256": "2a33554e50439e6d6ba31e21fce7033c757412f61b6f2cb7b59e805d3e2e9fc5",
+      "summary": "A proclamation celebrating the Denver Broncos as the 2016 AFC Champions and Uniting in Orange for Super Bowl 50."
+    },
+    {
+      "filename": "28_kingcountycc_05162018_2018_0149.txt",
+      "uid": "KingCountyCC_05162018_2018-0149",
+      "city": "KingCountyCC",
+      "whitespace_tokens": 2169,
+      "bytes": 12236,
+      "sha256": "15c05a48a58774e2b2d70dd508d8ca548c0f9e8752c93a2180ce3f20c563ea2f",
+      "summary": "AN ORDINANCE approving the grant funding allocation for the projects funded through the WaterWorks grant program, Round 3, in accordance with the 2017-2018 Biennial Budget Ordinance, Ordinance 18409, Section 113 and Ordinance 18261."
+    }
+  ],
+  "total_whitespace_tokens": 66924,
+  "total_bytes": 377488
+}

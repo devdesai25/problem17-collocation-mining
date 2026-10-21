@@ -1,0 +1,90 @@
+{
+  "sentence": "city council city council budget",
+  "tokens": [
+    "city",
+    "council",
+    "city",
+    "council",
+    "budget"
+  ],
+  "n_tokens": 5,
+  "n_bigrams": 4,
+  "n_convention": "N is the bigram token count (4). The sentence has 5 word tokens, so N_tokens - N_bigrams = 1, the sentence-final word that does not start a bigram.",
+  "pair": "city council",
+  "o11": 2.0,
+  "o12": 0.0,
+  "o21": 0.0,
+  "o22": 2.0,
+  "f_w1": 2.0,
+  "f_w2": 2.0,
+  "p_joint": 0.5,
+  "p_w1": 0.5,
+  "p_w2": 0.5,
+  "expected": {
+    "e11": 1.0,
+    "e12": 1.0,
+    "e21": 1.0,
+    "e22": 1.0
+  },
+  "cross_product": 4.0,
+  "chi_denominator": 16.0,
+  "student_t_general": 0.7071067811865475,
+  "student_t_xbar": 0.5,
+  "student_t_mu": 0.25,
+  "scores": {
+    "pmi": 1.0,
+    "pmi2": 1.0,
+    "pmi3": 1.0,
+    "npmi": 1.0,
+    "chi_sq": 4.0,
+    "chi_sq_yates": 1.0,
+    "student_t": 0.7071067811865475,
+    "likelihood_ratio": 5.545177444479562
+  },
+  "nltk_same_counts": {
+    "pmi": 1.0,
+    "chi_sq": 4.0,
+    "student_t": 0.7071067811865475,
+    "likelihood_ratio": 5.545177444479562
+  },
+  "nltk_finder_N": 5,
+  "nltk_finder_pmi_city_council": 1.3219280948873622,
+  "all_pairs": [
+    {
+      "phrase": "city council",
+      "freq": 2,
+      "pmi": 1.0,
+      "pmi2": 1.0,
+      "pmi3": 1.0,
+      "npmi": 1.0,
+      "chi_sq": 4.0,
+      "chi_sq_yates": 1.0,
+      "student_t": 0.7071067811865475,
+      "likelihood_ratio": 5.545177444479562
+    },
+    {
+      "phrase": "council budget",
+      "freq": 1,
+      "pmi": 1.0,
+      "pmi2": 1.0,
+      "pmi3": 1.0,
+      "npmi": 0.5,
+      "chi_sq": 1.3333333333333333,
+      "chi_sq_yates": 0.0,
+      "student_t": 0.5,
+      "likelihood_ratio": 1.7260924347106852
+    },
+    {
+      "phrase": "council city",
+      "freq": 1,
+      "pmi": 1.0,
+      "pmi2": 1.0,
+      "pmi3": 1.0,
+      "npmi": 0.5,
+      "chi_sq": 1.3333333333333333,
+      "chi_sq_yates": 0.0,
+      "student_t": 0.5,
+      "likelihood_ratio": 1.7260924347106852
+    }
+  ]
+}

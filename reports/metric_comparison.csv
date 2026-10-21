@@ -1,0 +1,18 @@
+metric,display,gold_split,n_gold,precision_at_20,recall_at_20,f1_at_20,hits_at_20,n_candidates,top1_phrase,top1_score,top20_mean_freq
+pmi,PMI,bigram,104,0.85,0.1634615385,0.2741935484,17,3864,coffee shop,14.32867493,3.9
+pmi2,PMI^2,bigram,104,0.85,0.1634615385,0.2741935484,17,3864,coffee shop,205.3109252,3.9
+pmi3,PMI^3,bigram,104,0.85,0.1634615385,0.2741935484,17,3864,coffee shop,2941.833506,3.9
+npmi,NPMI,bigram,104,0.95,0.1826923077,0.3064516129,19,3864,boot camp,1,7.8
+chi_sq,Chi-square,bigram,104,0.95,0.1826923077,0.3064516129,19,3864,boot camp,61728,8.4
+chi_sq_yates,Chi-square (Yates),bigram,104,0.9,0.1730769231,0.2903225806,18,3864,dry ice,48223.28103,8.8
+student_t,Student's t,bigram,104,0,0,0,0,3864,thank you,21.65687852,203
+likelihood_ratio,Log-likelihood,bigram,104,0.15,0.02884615385,0.04838709677,3,3864,thank you,3890.292701,166.5
+nltk_pmi,NLTK PMI,bigram,104,0.8,0.1538461538,0.2580645161,16,3864,coffee shop,14.44790114,3.85
+nltk_chi_sq,NLTK chi-square,bigram,104,0.95,0.1826923077,0.3064516129,19,3864,boot camp,67046,8.35
+nltk_student_t,NLTK t,bigram,104,0,0,0,0,3864,thank you,21.65330499,203
+nltk_likelihood_ratio,NLTK G^2,bigram,104,0.15,0.02884615385,0.04838709677,3,3864,thank you,3845.42319,175.2
+trigram_pmi,Trigram PMI,trigram,40,0.8,0.4,0.5333333333,16,1836,vince lombardi trophy,27.26822337,3.45
+nltk_trigram_pmi,NLTK trigram PMI,trigram,40,0.8,0.4,0.5333333333,16,1836,vince lombardi trophy,27.74379919,3.45
+nltk_trigram_chi_sq,NLTK trigram chi-square,trigram,40,0.85,0.425,0.5666666667,17,1836,vince lombardi trophy,674278272,4.05
+nltk_trigram_student_t,NLTK trigram t,trigram,40,0,0,0,0,1836,be go to,9.440289167,46.85
+nltk_trigram_likelihood_ratio,NLTK trigram G^2,trigram,40,0,0,0,0,1836,thank you mr,4318.813769,14.75
