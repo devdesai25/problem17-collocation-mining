@@ -10,7 +10,11 @@ __pycache__/
 *$py.class
 *.so
 
-# Distribution & Builds
+# Frontend dependencies & build artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+
 build/
 dist/
 *.egg-info/

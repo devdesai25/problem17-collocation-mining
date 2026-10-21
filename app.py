@@ -118,8 +118,8 @@ metric_key = st.sidebar.selectbox(
 @st.cache_data(show_spinner=False)
 def load_and_process_corpus(is_full: bool, file_name: str, remove_stops: bool):
     if is_full:
-        sentences, files = preprocess_corpus(drop_stopwords=remove_stops)
-        return sentences, len(files), sum(len(s) for s in sentences)
+        prep = preprocess_corpus(drop_stopwords=remove_stops)
+        return prep["sentences"], len(prep["files"]), prep["n_tokens"]
     else:
         path = CORPUS_DIR / file_name
         text = path.read_text(encoding="utf-8")
