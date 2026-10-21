@@ -1,16 +1,9 @@
-nltk==3.9.4
-numpy==2.2.3
-pandas==2.2.3
-scipy==1.15.2
-matplotlib==3.10.1
-reportlab==4.3.1
-pypdf==5.3.1
-pytest==8.3.4
-streamlit==1.42.2
-python-pptx==1.0.2
+# Production dependencies for FastAPI backend & STT service
 fastapi==0.115.8
 uvicorn==0.34.0
 python-multipart==0.0.20
 faster-whisper==1.1.1
 requests==2.32.3
+nltk==3.9.4
+numpy==2.2.3
 httpx==0.28.1

@@ -100,7 +100,12 @@ From the project root with Python 3.10+:
 ```bash
 python -m venv .venv
 source .venv/bin/activate       # On Windows: .venv\Scripts\activate
+
+# For production FastAPI app & deployment:
 pip install -r requirements.txt
+
+# For development (includes Streamlit app, offline research pipeline, and report generators):
+pip install -r requirements-dev.txt
 ```
 
 NLTK assets are pre-packaged offline in `assets/nltk_data`. If missing, download via:
@@ -186,6 +191,7 @@ problem17-collocation-mining/
 │   └── raw_transcripts/     # 28 MeetingBank municipal agenda transcripts
 ├── reports/                 # Evaluation tables, charts, and worked examples
 ├── docs/                    # PDF reports
-├── requirements.txt
+├── requirements.txt         # Production server dependencies (FastAPI, whisper, NLTK)
+├── requirements-dev.txt     # Full dev suite (Streamlit, pandas, scipy, matplotlib, etc.)
 └── README.md
 ```
