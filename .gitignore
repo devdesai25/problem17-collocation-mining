@@ -35,3 +35,6 @@ htmlcov/
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Whisper / Hugging Face model cache
+.hf_cache/

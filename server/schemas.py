@@ -92,6 +92,7 @@ class TraceRequest(BaseModel):
     target_phrase: str | None = Field(None, description="Optional chosen phrase to trace")
     drop_stopwords: bool = Field(False, description="Whether to drop stopwords")
     ngram: Literal[2, 3] = Field(2, description="N-gram order")
+    use_full_corpus: bool = Field(False, description="Whether to trace against the full 28-file corpus")
 
 
 class TraceStage(BaseModel):

@@ -119,11 +119,27 @@ export const InputSection: React.FC<InputSectionProps> = ({
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       audioChunksRef.current = [];
 
-      const mimeType = MediaRecorder.isTypeSupported('audio/webm;codecs=opus')
-        ? 'audio/webm;codecs=opus'
-        : 'audio/webm';
+      const candidateTypes = [
+        { mime: 'audio/webm;codecs=opus', ext: 'webm' },
+        { mime: 'audio/webm', ext: 'webm' },
+        { mime: 'audio/mp4', ext: 'mp4' },
+        { mime: 'audio/aac', ext: 'aac' },
+        { mime: 'audio/ogg;codecs=opus', ext: 'ogg' },
+        { mime: 'audio/wav', ext: 'wav' },
+      ];
 
-      const mediaRecorder = new MediaRecorder(stream, { mimeType });
+      let selectedMime = '';
+      let fileExt = 'webm';
+      for (const cand of candidateTypes) {
+        if (typeof MediaRecorder.isTypeSupported === 'function' && MediaRecorder.isTypeSupported(cand.mime)) {
+          selectedMime = cand.mime;
+          fileExt = cand.ext;
+          break;
+        }
+      }
+
+      const recorderOptions: MediaRecorderOptions = selectedMime ? { mimeType: selectedMime } : {};
+      const mediaRecorder = new MediaRecorder(stream, recorderOptions);
       mediaRecorderRef.current = mediaRecorder;
 
       mediaRecorder.ondataavailable = (event) => {
@@ -134,10 +150,11 @@ export const InputSection: React.FC<InputSectionProps> = ({
 
       mediaRecorder.onstop = async () => {
         stream.getTracks().forEach((track) => track.stop());
-        const audioBlob = new Blob(audioChunksRef.current, { type: mimeType });
+        const actualMime = mediaRecorder.mimeType || selectedMime || 'audio/webm';
+        const audioBlob = new Blob(audioChunksRef.current, { type: actualMime });
         if (audioBlob.size === 0) return;
 
-        const audioFile = new File([audioBlob], 'mic_recording.webm', { type: mimeType });
+        const audioFile = new File([audioBlob], `mic_recording.${fileExt}`, { type: actualMime });
         setIsTranscribing(true);
         setTranscribeStatus('Transcribing recorded audio via faster-whisper...');
 

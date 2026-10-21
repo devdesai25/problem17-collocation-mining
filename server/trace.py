@@ -12,11 +12,13 @@ sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 from nltk import pos_tag, sent_tokenize, word_tokenize
 from preprocessing import (
+    CORPUS_DIR,
     _CLITIC,
     _lemmatizer_singleton,
     clean_token,
     ensure_nltk,
     normalize_text,
+    preprocess_corpus,
     remove_stopwords,
     wordnet_pos,
 )
@@ -34,52 +36,92 @@ def generate_pipeline_trace(
     target_phrase: str | None = None,
     drop_stopwords: bool = False,
     ngram: int = 2,
+    use_full_corpus: bool = False,
 ) -> Dict[str, Any]:
-    """Extract real stage-by-stage intermediate transformations from the user's actual text."""
+    """Extract real stage-by-stage intermediate transformations from the user's actual text or full corpus."""
     ensure_nltk()
-    normalized = normalize_text(text)
-    raw_sentences = sent_tokenize(normalized)
-    if not raw_sentences:
-        raw_sentences = ["The city council approved the affordable housing proposal."]
 
-    total_sentences = len(raw_sentences)
+    if use_full_corpus:
+        prep = preprocess_corpus(drop_stopwords=drop_stopwords)
+        all_processed = prep["sentences"]
+        corpus_counts = build_counts(all_processed)
 
-    # Pick the chosen sentence (fallback to first sentence with >= 2 words if possible)
-    valid_indices = []
-    available_sentences = []
-    for idx, s in enumerate(raw_sentences):
-        words = [w for w in s.split() if len(w) > 1]
-        available_sentences.append({
-            "index": idx,
-            "text": s,
-            "word_count": len(words),
-        })
-        if len(words) >= 2:
-            valid_indices.append(idx)
+        # Collect candidate raw sentences from MeetingBank files for realistic display
+        files = sorted(CORPUS_DIR.glob("*.txt"))
+        corpus_raw_sentences: List[str] = []
+        for f in files:
+            file_text = normalize_text(f.read_text(encoding="utf-8"))
+            for s in sent_tokenize(file_text):
+                if len(s.split()) >= 4:
+                    corpus_raw_sentences.append(s)
 
-    if 0 <= sample_sentence_index < total_sentences:
+        matched_sentence = None
+        if target_phrase:
+            phrase_parts = [p.lower() for p in target_phrase.strip().split() if p]
+            for s in corpus_raw_sentences:
+                s_lower = s.lower()
+                if all(part in s_lower for part in phrase_parts):
+                    matched_sentence = s
+                    break
+
+        if matched_sentence:
+            sample_raw = matched_sentence
+        elif corpus_raw_sentences:
+            idx = min(sample_sentence_index, len(corpus_raw_sentences) - 1)
+            sample_raw = corpus_raw_sentences[idx]
+        else:
+            sample_raw = "The city council approved the affordable housing proposal."
+
+        raw_sentences = corpus_raw_sentences[:20]
+        total_sentences = prep.get("n_sentences", len(corpus_raw_sentences))
+        available_sentences = [
+            {"index": i, "text": s, "word_count": len(s.split())}
+            for i, s in enumerate(corpus_raw_sentences[:10])
+        ]
         chosen_idx = sample_sentence_index
-    elif valid_indices:
-        chosen_idx = valid_indices[0]
     else:
-        chosen_idx = 0
+        normalized = normalize_text(text)
+        raw_sentences = sent_tokenize(normalized)
+        if not raw_sentences:
+            raw_sentences = ["The city council approved the affordable housing proposal."]
 
-    sample_raw = raw_sentences[chosen_idx]
+        total_sentences = len(raw_sentences)
 
-    # Full corpus processed for counting
-    all_processed = []
-    for s in raw_sentences:
-        toks = [clean_token(t) for t in word_tokenize(s)]
-        toks = [t for t in toks if t]
-        tagged = pos_tag(toks) if toks else []
-        lemma_obj = _lemmatizer_singleton()
-        lemmas = [lemma_obj.lemmatize(t, wordnet_pos(tag)) for t, tag in tagged]
-        if drop_stopwords:
-            lemmas = remove_stopwords(lemmas)
-        if lemmas:
-            all_processed.append(lemmas)
+        valid_indices = []
+        available_sentences = []
+        for idx, s in enumerate(raw_sentences):
+            words = [w for w in s.split() if len(w) > 1]
+            available_sentences.append({
+                "index": idx,
+                "text": s,
+                "word_count": len(words),
+            })
+            if len(words) >= 2:
+                valid_indices.append(idx)
 
-    corpus_counts = build_counts(all_processed)
+        if 0 <= sample_sentence_index < total_sentences:
+            chosen_idx = sample_sentence_index
+        elif valid_indices:
+            chosen_idx = valid_indices[0]
+        else:
+            chosen_idx = 0
+
+        sample_raw = raw_sentences[chosen_idx]
+
+        # Full corpus processed for counting
+        all_processed = []
+        for s in raw_sentences:
+            toks = [clean_token(t) for t in word_tokenize(s)]
+            toks = [t for t in toks if t]
+            tagged = pos_tag(toks) if toks else []
+            lemma_obj = _lemmatizer_singleton()
+            lemmas = [lemma_obj.lemmatize(t, wordnet_pos(tag)) for t, tag in tagged]
+            if drop_stopwords:
+                lemmas = remove_stopwords(lemmas)
+            if lemmas:
+                all_processed.append(lemmas)
+
+        corpus_counts = build_counts(all_processed)
 
     # Detailed stage transformations for the sample sentence:
     # Stage 1: Raw text input
@@ -191,7 +233,6 @@ def generate_pipeline_trace(
             chosen_phrase_str = f"{chosen_w1} {chosen_w2}"
 
     if not chosen_phrase_str:
-        # Pick from sentence bigrams if available, or first bigram in corpus counts
         if sentence_bigrams:
             chosen_w1, chosen_w2 = sentence_bigrams[0]
             chosen_phrase_str = f"{chosen_w1} {chosen_w2}"
@@ -203,13 +244,17 @@ def generate_pipeline_trace(
             chosen_w1, chosen_w2 = "city", "council"
             chosen_phrase_str = "city council"
 
+    extracted_bg_strings = [" ".join(bg) for bg in sentence_bigrams]
+    if chosen_phrase_str and chosen_phrase_str not in extracted_bg_strings:
+        extracted_bg_strings.append(chosen_phrase_str)
+
     stage5 = {
         "id": "ngram_extraction",
         "title": "Stage 5: Candidate N-Gram Extraction",
         "subtitle": f"Generating sliding window {ngram}-grams",
         "description": "Sentence-internal sliding window extracts multi-word candidates without crossing boundaries.",
         "data": {
-            "extracted_bigrams": [" ".join(bg) for bg in sentence_bigrams],
+            "extracted_bigrams": extracted_bg_strings,
             "extracted_trigrams": [" ".join(tg) for tg in sentence_trigrams],
             "chosen_target_phrase": chosen_phrase_str,
         },

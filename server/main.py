@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
+import asyncio
+import os
 import sys
+from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -13,8 +16,9 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from fastapi import FastAPI, File, HTTPException, Query, UploadFile, status
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
 
+from models import BIGRAM_METRICS
 from server.analyzer import (
     analyze_text_or_corpus,
     compute_contingency_detail,
@@ -31,22 +35,52 @@ from server.schemas import (
     TranscribeResponse,
 )
 from server.trace import generate_pipeline_trace
-from server.transcribe import is_ffmpeg_available, transcribe_audio_file
+from server.transcribe import (
+    is_ffmpeg_available,
+    is_whisper_ready,
+    transcribe_audio_file,
+    warm_whisper_model,
+)
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Lifespan handler: pre-warms the Whisper model in the background on startup."""
+    # Run Whisper warming in a separate thread so server startup is instantaneous
+    asyncio.create_task(asyncio.to_thread(warm_whisper_model))
+    yield
+
 
 app = FastAPI(
     title="Collocation Mining & Association Scoring API",
     description="Deterministic statistical collocation extraction and association scoring for spoken transcripts.",
     version="2.0.0",
+    lifespan=lifespan,
 )
 
-# Enable CORS for Vite dev server and local clients
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins for local development
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# CORS Configuration:
+# In development (DEV=1): allow localhost/wildcard.
+# In production: same-origin by default (or explicit CORS_ORIGINS list), no wildcard credentials.
+dev_mode = os.getenv("DEV", "").strip() in ("1", "true", "True")
+cors_origins_env = os.getenv("CORS_ORIGINS", "").strip()
+
+if dev_mode:
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=False,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+elif cors_origins_env:
+    origins = [orig.strip() for orig in cors_origins_env.split(",") if orig.strip()]
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=origins,
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
 # Maximum input payload size guard (approx 5 MB of text)
 MAX_TEXT_LENGTH = 5_000_000
@@ -54,10 +88,11 @@ MAX_TEXT_LENGTH = 5_000_000
 
 @app.get("/api/health")
 def health_check() -> Dict[str, Any]:
-    """Health check reporting system and dependency availability."""
+    """Health check reporting system, Whisper readiness, and ffmpeg status."""
     return {
         "status": "ok",
         "service": "Collocation Mining & Association Scoring Engine",
+        "whisper_ready": is_whisper_ready(),
         "ffmpeg_available": is_ffmpeg_available(),
         "python_version": sys.version.split()[0],
     }
@@ -109,6 +144,13 @@ def analyze_collocations(payload: AnalyzeRequest) -> AnalyzeResponse:
             detail=f"Input text exceeds maximum allowed size ({MAX_TEXT_LENGTH} chars).",
         )
 
+    # Strict metric validation: return 422 if an invalid metric name is requested for bigrams
+    if payload.ngram == 2 and payload.metric not in BIGRAM_METRICS:
+        raise HTTPException(
+            status_code=422,
+            detail=f"Invalid metric '{payload.metric}'. Must be one of {list(BIGRAM_METRICS)}.",
+        )
+
     try:
         result = analyze_text_or_corpus(
             text=payload.text,
@@ -130,10 +172,10 @@ def analyze_collocations(payload: AnalyzeRequest) -> AnalyzeResponse:
 @app.post("/api/trace", response_model=TraceResponse)
 def get_trace(payload: TraceRequest) -> TraceResponse:
     """Generate per-stage intermediate data for the step-by-step pipeline animation."""
-    if not payload.text.strip():
+    if not payload.use_full_corpus and not payload.text.strip():
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Text cannot be empty for pipeline tracing.",
+            detail="Text cannot be empty for pipeline tracing when not using full corpus.",
         )
 
     try:
@@ -143,6 +185,7 @@ def get_trace(payload: TraceRequest) -> TraceResponse:
             target_phrase=payload.target_phrase,
             drop_stopwords=payload.drop_stopwords,
             ngram=payload.ngram,
+            use_full_corpus=payload.use_full_corpus,
         )
         return TraceResponse(**trace_data)
     except Exception as e:
@@ -202,7 +245,15 @@ def get_sample_content(file_id: str) -> Dict[str, str]:
     return {"id": file_id, "content": content}
 
 
+# Mount the compiled React/Vite frontend if frontend/dist exists
+# Placed AFTER all /api routes so /api/* takes routing precedence
+FRONTEND_DIST = PROJECT_ROOT / "frontend" / "dist"
+if FRONTEND_DIST.is_dir():
+    app.mount("/", StaticFiles(directory=str(FRONTEND_DIST), html=True), name="frontend")
+
+
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run("server.main:app", host="127.0.0.1", port=8000, reload=True)
+    port = int(os.getenv("PORT", "8000"))
+    uvicorn.run("server.main:app", host="0.0.0.0", port=port, workers=1)

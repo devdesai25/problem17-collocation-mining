@@ -17,6 +17,7 @@ class TestServerEndpoints(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         data = response.json()
         self.assertEqual(data["status"], "ok")
+        self.assertIn("whisper_ready", data)
 
     def test_analyze_toy_example(self):
         """Toy example 'city council city council budget':
@@ -114,6 +115,19 @@ class TestServerEndpoints(unittest.TestCase):
         self.assertIn("pmi", data["formulas"])
         self.assertIn("chi_sq", data["formulas"])
 
+    def test_analyze_invalid_metric_422(self):
+        """Invalid metric name must return 422 Unprocessable Entity."""
+        payload = {
+            "text": self.toy_text,
+            "ngram": 2,
+            "min_freq": 1,
+            "metric": "invalid_metric_name_xyz",
+            "drop_stopwords": False,
+            "top_k": 10,
+        }
+        response = self.client.post("/api/analyze", json=payload)
+        self.assertEqual(response.status_code, 422)
+
     def test_sample_endpoints(self):
         response = self.client.get("/api/sample")
         self.assertEqual(response.status_code, 200)
@@ -125,6 +139,42 @@ class TestServerEndpoints(unittest.TestCase):
         detail_resp = self.client.get(f"/api/sample/{first_id}")
         self.assertEqual(detail_resp.status_code, 200)
         self.assertTrue(len(detail_resp.json()["content"]) > 0)
+
+        # Non-existent sample ID should return 404
+        bad_resp = self.client.get("/api/sample/non_existent_transcript_xyz_999")
+        self.assertEqual(bad_resp.status_code, 404)
+
+    def test_trace_full_corpus(self):
+        """Verify trace works with full corpus mode: N=61,728 and coffee shop PMI ~14.33."""
+        payload = {
+            "text": "",
+            "sample_sentence_index": 0,
+            "target_phrase": "coffee shop",
+            "drop_stopwords": False,
+            "ngram": 2,
+            "use_full_corpus": True,
+        }
+        response = self.client.post("/api/trace", json=payload)
+        self.assertEqual(response.status_code, 200)
+        data = response.json()
+
+        self.assertEqual(data["chosen_phrase"], "coffee shop")
+        self.assertEqual(len(data["stages"]), 9)
+
+        # Stage 7 contingency table
+        ct_stage = data["stages"][6]["data"]
+        self.assertEqual(ct_stage["n"], 61728)
+        self.assertEqual(ct_stage["o11"], 3)
+
+        # Stage 8 scores
+        scores_stage = data["stages"][7]["data"]["scores"]
+        self.assertAlmostEqual(scores_stage["pmi"], 14.3314, places=2)
+
+        # Stage 9 ranking
+        ranking_stage = data["stages"][8]["data"]
+        self.assertEqual(ranking_stage["phrase"], "coffee shop")
+        self.assertIsNotNone(ranking_stage["target_rank"])
+        self.assertGreater(len(ranking_stage["top_5_pmi"]), 0)
 
 
 if __name__ == "__main__":

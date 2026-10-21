@@ -55,6 +55,7 @@ export async function fetchTrace(params: {
   target_phrase?: string;
   drop_stopwords?: boolean;
   ngram?: NgramOrder;
+  use_full_corpus?: boolean;
 }): Promise<TraceResponse> {
   const res = await fetch(`${API_BASE}/trace`, {
     method: 'POST',
@@ -65,6 +66,7 @@ export async function fetchTrace(params: {
       target_phrase: params.target_phrase,
       drop_stopwords: params.drop_stopwords ?? false,
       ngram: params.ngram ?? 2,
+      use_full_corpus: params.use_full_corpus ?? false,
     }),
   });
   if (!res.ok) {

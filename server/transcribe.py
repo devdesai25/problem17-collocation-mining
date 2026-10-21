@@ -10,24 +10,48 @@ from pathlib import Path
 from typing import Tuple
 
 _whisper_model = None
+_whisper_ready = False
 
 
 def is_ffmpeg_available() -> bool:
     return shutil.which("ffmpeg") is not None
 
 
+def is_whisper_ready() -> bool:
+    global _whisper_ready
+    return _whisper_ready
+
+
+def warm_whisper_model() -> None:
+    """Pre-warm the Whisper model on server startup without blocking initial requests."""
+    global _whisper_ready
+    try:
+        get_whisper_model()
+        _whisper_ready = True
+    except Exception as e:
+        print(f"Whisper background warming note: {e}")
+        _whisper_ready = False
+
+
 def get_whisper_model():
     """Lazily load the faster-whisper model."""
-    global _whisper_model
+    global _whisper_model, _whisper_ready
     if _whisper_model is None:
         try:
             from faster_whisper import WhisperModel
-        except ImportError as e:
-            raise RuntimeError("faster-whisper is not installed in the Python environment.") from e
+        except Exception as e:
+            raise RuntimeError(f"Could not load faster-whisper: {e}") from e
 
         model_size = os.getenv("WHISPER_MODEL", "base")
-        # Run on CPU using int8 quantization for lightweight offline laptop performance
-        _whisper_model = WhisperModel(model_size, device="cpu", compute_type="int8")
+        download_root = os.getenv("HF_HOME")
+        # Run on CPU using int8 quantization for lightweight offline laptop/Replit performance
+        _whisper_model = WhisperModel(
+            model_size,
+            device="cpu",
+            compute_type="int8",
+            download_root=download_root,
+        )
+        _whisper_ready = True
     return _whisper_model
 
 

@@ -86,18 +86,15 @@ export const App: React.FC = () => {
       });
       setAnalysis(analysisData);
 
-      // 2. Run pipeline trace for animation
-      const traceText = useFullCorpus
-        ? (analysisData.rankings.length > 0 ? analysisData.rankings[0].phrase : text)
-        : text;
-
+      // 2. Run pipeline trace for animation with real corpus counts
       const topPhrase = analysisData.rankings[0]?.phrase;
       const traceData = await fetchTrace({
-        text: traceText || text,
+        text,
         sample_sentence_index: 0,
         target_phrase: topPhrase,
         drop_stopwords: dropStopwords,
         ngram,
+        use_full_corpus: useFullCorpus,
       });
       setTrace(traceData);
     } catch (err: any) {
@@ -122,6 +119,7 @@ export const App: React.FC = () => {
         target_phrase: topPhrase,
         drop_stopwords: dropStopwords,
         ngram,
+        use_full_corpus: useFullCorpus,
       });
       setTrace(traceData);
     } catch (err) {

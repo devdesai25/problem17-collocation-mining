@@ -309,9 +309,8 @@ def get_sample_transcript_content(file_id_or_name: str | int) -> str:
         idx = int(file_id_or_name) - 1
         if 0 <= idx < len(files):
             return files[idx].read_text(encoding="utf-8")
+        return ""
     for f in files:
         if f.name == file_id_or_name:
             return f.read_text(encoding="utf-8")
-    if files:
-        return files[0].read_text(encoding="utf-8")
     return ""

@@ -1,0 +1,16 @@
+modules = ["python-3.12", "nodejs-20"]
+run = "uvicorn server.main:app --host 0.0.0.0 --port ${PORT:-8000} --workers 1"
+entrypoint = "server/main.py"
+
+[env]
+WHISPER_MODEL = "base"
+HF_HOME = "./.hf_cache"
+
+[deployment]
+deploymentTarget = "autoscale"
+build = ["sh", "-c", "pip install -r requirements-server.txt && python scripts/download_whisper.py && cd frontend && npm ci && npm run build"]
+run = ["sh", "-c", "uvicorn server.main:app --host 0.0.0.0 --port ${PORT:-8000} --workers 1"]
+
+[[ports]]
+localPort = 8000
+externalPort = 80
