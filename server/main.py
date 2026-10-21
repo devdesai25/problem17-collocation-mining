@@ -81,6 +81,15 @@ elif cors_origins_env:
         allow_methods=["*"],
         allow_headers=["*"],
     )
+else:
+    # Default local development fallback for Vite dev proxy / localhost
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
 # Maximum input payload size guard (approx 5 MB of text)
 MAX_TEXT_LENGTH = 5_000_000
